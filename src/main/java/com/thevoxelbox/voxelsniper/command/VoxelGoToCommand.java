@@ -11,7 +11,7 @@ public class VoxelGoToCommand extends VoxelCommand
     public VoxelGoToCommand(final VoxelSniper plugin)
     {
         super("VoxelGoTo", plugin);
-        setIdentifier("goto");
+        setIdentifier("vgoto");
         setPermission("voxelsniper.sniper");
     }
 

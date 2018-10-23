@@ -1,8 +1,7 @@
 package com.thevoxelbox.voxelsniper.brush.perform;
 
-import org.bukkit.block.Block;
-
 import com.thevoxelbox.voxelsniper.Message;
+import org.bukkit.block.Block;
 
 /**
  * @author Voxel
@@ -35,7 +34,7 @@ public class pInkInkNoPhys extends vPerformer
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     public void perform(Block b)
     {
         if (b.getData() == dr)

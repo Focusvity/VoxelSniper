@@ -11,7 +11,7 @@ public class VoxelPaintCommand extends VoxelCommand
     public VoxelPaintCommand(final VoxelSniper plugin)
     {
         super("VoxelPaint", plugin);
-        setIdentifier("paint");
+        setIdentifier("vpaint");
         setPermission("voxelsniper.paint");
     }
 

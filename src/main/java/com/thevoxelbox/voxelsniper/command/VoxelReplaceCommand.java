@@ -15,7 +15,7 @@ public class VoxelReplaceCommand extends VoxelCommand
     public VoxelReplaceCommand(final VoxelSniper plugin)
     {
         super("VoxelReplace", plugin);
-        setIdentifier("vr");
+        setIdentifier("vvr");
         setPermission("voxelsniper.sniper");
     }
 

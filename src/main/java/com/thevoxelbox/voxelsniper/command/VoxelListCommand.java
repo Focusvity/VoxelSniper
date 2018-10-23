@@ -14,7 +14,7 @@ public class VoxelListCommand extends VoxelCommand
     public VoxelListCommand(final VoxelSniper plugin)
     {
         super("VoxelList", plugin);
-        setIdentifier("vl");
+        setIdentifier("vvl");
         setPermission("voxelsniper.sniper");
     }
 

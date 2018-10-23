@@ -13,7 +13,7 @@ public class VoxelInkReplaceCommand extends VoxelCommand
     public VoxelInkReplaceCommand(final VoxelSniper plugin)
     {
         super("VoxelInkReplace", plugin);
-        setIdentifier("vir");
+        setIdentifier("vvir");
         setPermission("voxelsniper.sniper");
     }
 

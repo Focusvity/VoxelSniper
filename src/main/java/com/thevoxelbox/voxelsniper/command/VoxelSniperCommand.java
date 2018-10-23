@@ -21,7 +21,7 @@ public class VoxelSniperCommand extends VoxelCommand
     {
 
         super("VoxelSniper", plugin);
-        setIdentifier("vs");
+        setIdentifier("vvs");
         setPermission("voxelsniper.sniper");
     }
 

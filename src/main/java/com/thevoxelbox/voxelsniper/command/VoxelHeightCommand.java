@@ -12,7 +12,7 @@ public class VoxelHeightCommand extends VoxelCommand
     public VoxelHeightCommand(final VoxelSniper plugin)
     {
         super("VoxelHeight", plugin);
-        setIdentifier("vh");
+        setIdentifier("vvh");
         setPermission("voxelsniper.sniper");
     }
 

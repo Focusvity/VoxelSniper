@@ -15,7 +15,7 @@ public class VoxelVoxelCommand extends VoxelCommand
     public VoxelVoxelCommand(final VoxelSniper plugin)
     {
         super("VoxelVoxel", plugin);
-        setIdentifier("v");
+        setIdentifier("vv");
         setPermission("voxelsniper.sniper");
     }
 

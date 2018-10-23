@@ -9,7 +9,7 @@ public class VoxelChunkCommand extends VoxelCommand
     public VoxelChunkCommand(final VoxelSniper plugin)
     {
         super("VoxelChunk", plugin);
-        setIdentifier("vchunk");
+        setIdentifier("vvchunk");
     }
 
     @Override

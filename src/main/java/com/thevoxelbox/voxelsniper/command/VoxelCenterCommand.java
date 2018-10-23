@@ -12,7 +12,7 @@ public class VoxelCenterCommand extends VoxelCommand
     public VoxelCenterCommand(final VoxelSniper plugin)
     {
         super("VoxelCenter", plugin);
-        setIdentifier("vc");
+        setIdentifier("vvc");
         setPermission("voxelsniper.sniper");
     }
 

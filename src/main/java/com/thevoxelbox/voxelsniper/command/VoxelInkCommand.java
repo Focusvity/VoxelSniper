@@ -13,7 +13,7 @@ public class VoxelInkCommand extends VoxelCommand
     public VoxelInkCommand(final VoxelSniper plugin)
     {
         super("VoxelInk", plugin);
-        setIdentifier("vi");
+        setIdentifier("vvi");
         setPermission("voxelsniper.sniper");
     }
 
