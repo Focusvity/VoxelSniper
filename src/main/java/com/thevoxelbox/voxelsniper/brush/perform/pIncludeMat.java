@@ -6,7 +6,6 @@ package com.thevoxelbox.voxelsniper.brush.perform;
 
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.util.VoxelList;
-
 import org.bukkit.block.Block;
 
 /**
@@ -40,7 +39,7 @@ public class pIncludeMat extends vPerformer
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     public void perform(Block b)
     {
         if (includeList.contains(new int[]{b.getTypeId(), b.getData()}))

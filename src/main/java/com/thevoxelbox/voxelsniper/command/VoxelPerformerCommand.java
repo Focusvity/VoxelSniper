@@ -3,9 +3,9 @@ package com.thevoxelbox.voxelsniper.command;
 import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.Sniper;
 import com.thevoxelbox.voxelsniper.VoxelSniper;
+import com.thevoxelbox.voxelsniper.api.command.VoxelCommand;
 import com.thevoxelbox.voxelsniper.brush.IBrush;
 import com.thevoxelbox.voxelsniper.brush.perform.Performer;
-import com.thevoxelbox.voxelsniper.api.command.VoxelCommand;
 import org.bukkit.entity.Player;
 
 import java.util.logging.Level;
@@ -32,7 +32,7 @@ public class VoxelPerformerCommand extends VoxelCommand
                 IBrush brush = sniper.getBrush(sniper.getCurrentToolId());
                 if (brush instanceof Performer)
                 {
-                    ((Performer) brush).parse(new String[]{ "m" }, snipeData);
+                    ((Performer) brush).parse(new String[]{"m"}, snipeData);
                 }
                 else
                 {

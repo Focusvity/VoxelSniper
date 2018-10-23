@@ -4,7 +4,6 @@ import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.Undo;
 import com.thevoxelbox.voxelsniper.util.BlockWrapper;
-
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 
@@ -87,7 +86,7 @@ public class Rot3DBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void getMatrix()
+    private void getMatrix()
     { // only need to do once. But y needs to change + sphere
         final double brushSizeSquared = Math.pow(this.bSize + 0.5, 2);
         this.brushSize = (this.bSize * 2) + 1;

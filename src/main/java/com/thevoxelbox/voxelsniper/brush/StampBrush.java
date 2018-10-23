@@ -1,64 +1,25 @@
 package com.thevoxelbox.voxelsniper.brush;
 
-import java.util.HashSet;
-
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.Undo;
-
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
+
+import java.util.HashSet;
 
 /**
  *
  */
 public class StampBrush extends Brush
 {
-    /**
-     * @author Voxel
-     */
-    protected class BlockWrapper
-    {
-        public int id;
-        public int x;
-        public int y;
-        public int z;
-        public byte d;
-
-        /**
-         * @param b
-         * @param blx
-         * @param bly
-         * @param blz
-         */
-        @SuppressWarnings("deprecation")
-		public BlockWrapper(final Block b, final int blx, final int bly, final int blz)
-        {
-            this.id = b.getTypeId();
-            this.d = b.getData();
-            this.x = blx;
-            this.y = bly;
-            this.z = blz;
-        }
-    }
-
-    /**
-     * @author Monofraps
-     */
-    protected enum StampType
-    {
-        NO_AIR, FILL, DEFAULT
-    }
-
     protected HashSet<BlockWrapper> clone = new HashSet<BlockWrapper>();
     protected HashSet<BlockWrapper> fall = new HashSet<BlockWrapper>();
     protected HashSet<BlockWrapper> drop = new HashSet<BlockWrapper>();
     protected HashSet<BlockWrapper> solid = new HashSet<BlockWrapper>();
     protected Undo undo;
     protected boolean sorted = false;
-
     protected StampType stamp = StampType.DEFAULT;
-
     /**
      *
      */
@@ -77,7 +38,6 @@ public class StampBrush extends Brush
 
     /**
      * @param id
-     *
      * @return
      */
     protected final boolean falling(final int id)
@@ -87,7 +47,6 @@ public class StampBrush extends Brush
 
     /**
      * @param id
-     *
      * @return
      */
     protected final boolean fallsOff(final int id)
@@ -129,7 +88,7 @@ public class StampBrush extends Brush
      * @param cb
      */
     @SuppressWarnings("deprecation")
-	protected final void setBlock(final BlockWrapper cb)
+    protected final void setBlock(final BlockWrapper cb)
     {
         final Block block = this.clampY(this.getTargetBlock().getX() + cb.x, this.getTargetBlock().getY() + cb.y, this.getTargetBlock().getZ() + cb.z);
         this.undo.put(block);
@@ -141,7 +100,7 @@ public class StampBrush extends Brush
      * @param cb
      */
     @SuppressWarnings("deprecation")
-	protected final void setBlockFill(final BlockWrapper cb)
+    protected final void setBlockFill(final BlockWrapper cb)
     {
         final Block block = this.clampY(this.getTargetBlock().getX() + cb.x, this.getTargetBlock().getY() + cb.y, this.getTargetBlock().getZ() + cb.z);
         if (block.getTypeId() == 0)
@@ -372,5 +331,41 @@ public class StampBrush extends Brush
     public String getPermissionNode()
     {
         return "voxelsniper.brush.stamp";
+    }
+
+    /**
+     * @author Monofraps
+     */
+    protected enum StampType
+    {
+        NO_AIR, FILL, DEFAULT
+    }
+
+    /**
+     * @author Voxel
+     */
+    protected class BlockWrapper
+    {
+        public int id;
+        public int x;
+        public int y;
+        public int z;
+        public byte d;
+
+        /**
+         * @param b
+         * @param blx
+         * @param bly
+         * @param blz
+         */
+        @SuppressWarnings("deprecation")
+        public BlockWrapper(final Block b, final int blx, final int bly, final int blz)
+        {
+            this.id = b.getTypeId();
+            this.d = b.getData();
+            this.x = blx;
+            this.y = bly;
+            this.z = blz;
+        }
     }
 }

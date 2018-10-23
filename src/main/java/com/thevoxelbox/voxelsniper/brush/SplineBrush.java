@@ -238,6 +238,12 @@ public class SplineBrush extends PerformBrush
         }
     }
 
+    @Override
+    public String getPermissionNode()
+    {
+        return "voxelsniper.brush.spline";
+    }
+
     // Vector class for splines
     protected class Point
     {
@@ -303,11 +309,5 @@ public class SplineBrush extends PerformBrush
         {
             this.z = z;
         }
-    }
-
-    @Override
-    public String getPermissionNode()
-    {
-        return "voxelsniper.brush.spline";
     }
 }

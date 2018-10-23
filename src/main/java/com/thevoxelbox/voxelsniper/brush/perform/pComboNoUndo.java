@@ -39,7 +39,7 @@ public class pComboNoUndo extends vPerformer
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     public void perform(Block b)
     {
         if (b.getTypeId() != i || b.getData() != d)

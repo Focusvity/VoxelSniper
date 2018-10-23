@@ -1,20 +1,13 @@
 package com.thevoxelbox.voxelsniper.brush;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-
 import com.google.common.io.Files;
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.Undo;
-
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
+
+import java.io.*;
 
 /**
  * This is paste only currently. Assumes files exist, and thus has no usefulness until I add in saving stencils later. Uses sniper-exclusive stencil format: 3
@@ -24,7 +17,7 @@ import org.bukkit.block.Block;
  * to be size 1, which in Minecraft is almost definitely true. IF boolean was true, next unsigned byte stores the number of consecutive blocks of the same type,
  * up to 256. IF boolean was false, there is no byte here, goes straight to ID and data instead, which applies to just one block. 2 bytes to identify type of
  * block. First byte is ID, second is data. This applies to every one of the line of consecutive blocks if boolean was true. )
- * 
+ * <p>
  * TODO: Make limit a config option
  *
  * @author Gavjenks
@@ -54,7 +47,7 @@ public class StencilBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void stencilPaste(final SnipeData v)
+    private void stencilPaste(final SnipeData v)
     {
         if (this.filename.matches("NoFileLoaded"))
         {
@@ -256,7 +249,7 @@ public class StencilBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void stencilSave(final SnipeData v)
+    private void stencilSave(final SnipeData v)
     {
 
         final File file = new File("plugins/VoxelSniper/stencils/" + this.filename + ".vstencil");

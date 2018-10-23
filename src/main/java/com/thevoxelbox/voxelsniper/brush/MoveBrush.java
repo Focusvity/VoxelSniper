@@ -95,7 +95,7 @@ public class MoveBrush extends Brush
      * @param direction
      */
     @SuppressWarnings("deprecation")
-	private void moveSelection(final SnipeData v, final Selection selection, final int[] direction)
+    private void moveSelection(final SnipeData v, final Selection selection, final int[] direction)
     {
         if (selection.getBlockStates().size() > 0)
         {
@@ -244,6 +244,12 @@ public class MoveBrush extends Brush
         }
     }
 
+    @Override
+    public String getPermissionNode()
+    {
+        return "voxelsniper.brush.move";
+    }
+
     /**
      * Selection Helper class.
      *
@@ -346,11 +352,5 @@ public class MoveBrush extends Brush
         {
             this.location2 = location2;
         }
-    }
-
-    @Override
-    public String getPermissionNode()
-    {
-        return "voxelsniper.brush.move";
     }
 }

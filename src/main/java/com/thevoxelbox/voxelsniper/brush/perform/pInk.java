@@ -5,7 +5,6 @@
 package com.thevoxelbox.voxelsniper.brush.perform;
 
 import com.thevoxelbox.voxelsniper.Message;
-
 import org.bukkit.block.Block;
 
 /**
@@ -36,7 +35,7 @@ public class pInk extends vPerformer
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     public void perform(Block b)
     {
         h.put(b);

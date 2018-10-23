@@ -1,15 +1,14 @@
 package com.thevoxelbox.voxelsniper.brush;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.Undo;
-
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 // Proposal: Use /v and /vr for leave and wood material // or two more parameters -- Monofraps
 
@@ -55,7 +54,7 @@ public class GenerateTreeBrush extends Brush
 
     // Branch Creation based on direction chosen from the parameters passed.
     @SuppressWarnings("deprecation")
-	private void branchCreate(final int xDirection, final int zDirection)
+    private void branchCreate(final int xDirection, final int zDirection)
     {
 
         // Sets branch origin.
@@ -105,7 +104,7 @@ public class GenerateTreeBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void leafNodeCreate()
+    private void leafNodeCreate()
     {
         // Generates the node size.
         final int nodeRadius = this.randGenerator.nextInt(this.nodeMax - this.nodeMin + 1) + this.nodeMin;
@@ -232,7 +231,7 @@ public class GenerateTreeBrush extends Brush
      * @param zDirection
      */
     @SuppressWarnings("deprecation")
-	private void rootCreate(final int xDirection, final int zDirection)
+    private void rootCreate(final int xDirection, final int zDirection)
     {
         // Sets Origin.
         final int originX = blockPositionX;
@@ -339,7 +338,7 @@ public class GenerateTreeBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void trunkCreate()
+    private void trunkCreate()
     {
         // Creates true circle discs of the set size using the wood type selected.
         final double bSquared = Math.pow(this.thickness + 0.5, 2);
@@ -393,7 +392,7 @@ public class GenerateTreeBrush extends Brush
     }
 
     /*
-     * 
+     *
      * Code Concerning Trunk Generation
      */
     private void trunkGen()

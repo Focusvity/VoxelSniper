@@ -19,11 +19,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.util.ChatPaginator;
 import org.bukkit.util.Vector;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * http://www.voxelwiki.com/minecraft/VoxelSniper#The_Erosion_Brush
@@ -84,7 +80,7 @@ public class ErodeBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void erosion(final SnipeData v, final ErosionPreset erosionPreset)
+    private void erosion(final SnipeData v, final ErosionPreset erosionPreset)
     {
 
         final BlockChangeTracker blockChangeTracker = new BlockChangeTracker(this.getTargetBlock().getWorld());
@@ -303,6 +299,12 @@ public class ErodeBrush extends Brush
         }
     }
 
+    @Override
+    public String getPermissionNode()
+    {
+        return "voxelsniper.brush.erode";
+    }
+
     /**
      * @author MikeMatrix
      */
@@ -418,7 +420,7 @@ public class ErodeBrush extends Brush
         private final byte data;
 
         @SuppressWarnings("deprecation")
-		public BlockWrapper(final Block block)
+        public BlockWrapper(final Block block)
         {
             this.block = block;
             this.data = block.getData();
@@ -554,11 +556,5 @@ public class ErodeBrush extends Brush
         {
             return new ErosionPreset(this.fillFaces, this.fillRecursion, this.erosionFaces, this.erosionRecursion);
         }
-    }
-
-    @Override
-    public String getPermissionNode()
-    {
-        return "voxelsniper.brush.erode";
     }
 }

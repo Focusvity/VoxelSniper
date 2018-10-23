@@ -105,7 +105,7 @@ public class PullBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void setBlock(final BlockWrapper block)
+    private void setBlock(final BlockWrapper block)
     {
         final Block currentBlock = this.clampY(block.getX(), block.getY() + (int) (this.vh * block.getStr()), block.getZ());
         if (this.getBlockIdAt(block.getX(), block.getY() - 1, block.getZ()) == 0)
@@ -131,7 +131,7 @@ public class PullBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void setBlockDown(final BlockWrapper block)
+    private void setBlockDown(final BlockWrapper block)
     {
         final Block currentBlock = this.clampY(block.getX(), block.getY() + (int) (this.vh * block.getStr()), block.getZ());
         currentBlock.setTypeId(block.getId());
@@ -166,7 +166,7 @@ public class PullBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     protected final void powder(final SnipeData v)
     {
         this.vh = v.getVoxelHeight();
@@ -285,6 +285,12 @@ public class PullBrush extends Brush
         }
     }
 
+    @Override
+    public String getPermissionNode()
+    {
+        return "voxelsniper.brush.pull";
+    }
+
     /**
      * @author Piotr
      */
@@ -303,7 +309,7 @@ public class PullBrush extends Brush
          * @param st
          */
         @SuppressWarnings("deprecation")
-		public BlockWrapper(final Block block, final double st)
+        public BlockWrapper(final Block block, final double st)
         {
             this.id = block.getTypeId();
             this.d = block.getData();
@@ -360,11 +366,5 @@ public class PullBrush extends Brush
         {
             return this.z;
         }
-    }
-
-    @Override
-    public String getPermissionNode()
-    {
-        return "voxelsniper.brush.pull";
     }
 }

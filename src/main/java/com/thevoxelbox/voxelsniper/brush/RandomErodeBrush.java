@@ -72,7 +72,7 @@ public class RandomErodeBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private boolean fill(final int x, final int y, final int z)
+    private boolean fill(final int x, final int y, final int z)
     {
         if (this.snap[x][y][z].isSolid())
         {
@@ -171,7 +171,7 @@ public class RandomErodeBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void rerosion(final SnipeData v)
+    private void rerosion(final SnipeData v)
     {
         final Undo undo = new Undo();
 
@@ -255,7 +255,7 @@ public class RandomErodeBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void rfilling(final SnipeData v)
+    private void rfilling(final SnipeData v)
     {
         final Undo undo = new Undo();
 
@@ -386,6 +386,12 @@ public class RandomErodeBrush extends Brush
         vm.size();
     }
 
+    @Override
+    public String getPermissionNode()
+    {
+        return "voxelsniper.brush.randomerode";
+    }
+
     /**
      * @author unknown
      */
@@ -400,7 +406,7 @@ public class RandomErodeBrush extends Brush
          * @param bl
          */
         @SuppressWarnings("deprecation")
-		public BlockWrapper(final Block bl)
+        public BlockWrapper(final Block bl)
         {
             this.setNativeBlock(bl);
             this.setI(bl.getTypeId());
@@ -469,11 +475,5 @@ public class RandomErodeBrush extends Brush
         {
             this.i = i;
         }
-    }
-
-    @Override
-    public String getPermissionNode()
-    {
-        return "voxelsniper.brush.randomerode";
     }
 }

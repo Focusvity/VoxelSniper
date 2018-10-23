@@ -1,13 +1,12 @@
 package com.thevoxelbox.voxelsniper.brush;
 
+import com.thevoxelbox.voxelsniper.Message;
+import com.thevoxelbox.voxelsniper.SnipeData;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.LargeFireball;
 import org.bukkit.entity.SmallFireball;
 import org.bukkit.util.Vector;
-
-import com.thevoxelbox.voxelsniper.Message;
-import com.thevoxelbox.voxelsniper.SnipeData;
 
 /**
  * @author Gavjenks Heavily revamped from ruler brush blockPositionY

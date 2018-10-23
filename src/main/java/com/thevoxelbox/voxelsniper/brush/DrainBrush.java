@@ -3,7 +3,6 @@ package com.thevoxelbox.voxelsniper.brush;
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.Undo;
-
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 
@@ -27,7 +26,7 @@ public class DrainBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void drain(final SnipeData v)
+    private void drain(final SnipeData v)
     {
         final int brushSize = v.getBrushSize();
         final double brushSizeSquared = Math.pow(brushSize + this.trueCircle, 2);

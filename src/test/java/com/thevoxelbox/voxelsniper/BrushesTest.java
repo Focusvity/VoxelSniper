@@ -1,9 +1,7 @@
 package com.thevoxelbox.voxelsniper;
 
 import com.google.common.collect.Multimap;
-import com.google.common.collect.Sets;
 import com.thevoxelbox.voxelsniper.brush.IBrush;
-import org.bukkit.util.Vector;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -75,7 +73,7 @@ public class BrushesTest
     {
         IBrush brush = Mockito.mock(IBrush.class);
         brushes.registerSniperBrush(brush.getClass(), "mockhandle", "testhandle");
-        Multimap<Class<? extends IBrush>,String> registeredBrushesMultimap = brushes.getRegisteredBrushesMultimap();
+        Multimap<Class<? extends IBrush>, String> registeredBrushesMultimap = brushes.getRegisteredBrushesMultimap();
         Assert.assertTrue(registeredBrushesMultimap.containsKey(brush.getClass()));
         Assert.assertFalse(registeredBrushesMultimap.containsKey(IBrush.class));
         Assert.assertTrue(registeredBrushesMultimap.containsEntry(brush.getClass(), "mockhandle"));

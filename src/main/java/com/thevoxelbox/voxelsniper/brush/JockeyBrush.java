@@ -250,6 +250,12 @@ public class JockeyBrush extends Brush
         }
     }
 
+    @Override
+    public String getPermissionNode()
+    {
+        return "voxelsniper.brush.jockey";
+    }
+
     /**
      * Available types of jockey modes.
      */
@@ -268,11 +274,5 @@ public class JockeyBrush extends Brush
         {
             return this.name;
         }
-    }
-
-    @Override
-    public String getPermissionNode()
-    {
-        return "voxelsniper.brush.jockey";
     }
 }

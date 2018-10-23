@@ -113,7 +113,7 @@ public class ExtrudeBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private Undo perform(final Block b1, final Block b2, final SnipeData v, final Undo undo)
+    private Undo perform(final Block b1, final Block b2, final SnipeData v, final Undo undo)
     {
         if (v.getVoxelList().contains(new int[]{this.getBlockIdAt(b1.getX(), b1.getY(), b1.getZ()), this.getBlockDataAt(b1.getX(), b1.getY(), b1.getZ())}))
         {

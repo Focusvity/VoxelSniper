@@ -2,7 +2,6 @@ package com.thevoxelbox.voxelsniper.brush;
 
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
-
 import org.bukkit.ChatColor;
 
 /**
@@ -27,8 +26,7 @@ public class CloneStampBrush extends StampBrush
      * x y z -- initial center of the selection v.brushSize -- the radius of the cylinder v.voxelHeight -- the heigth of the cylinder c.cCen -- the offset on
      * the Y axis of the selection ( bottom of the cylinder ) as blockPositionY: Bottom_Y = targetBlock.y + v.cCen;
      *
-     * @param v
-     *         the caller
+     * @param v the caller
      */
     private void clone(final SnipeData v)
     {

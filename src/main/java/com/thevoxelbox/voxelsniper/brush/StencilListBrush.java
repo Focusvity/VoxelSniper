@@ -67,7 +67,7 @@ public class StencilListBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void stencilPaste(final SnipeData v)
+    private void stencilPaste(final SnipeData v)
     {
         if (this.filename.matches("NoFileLoaded"))
         {
@@ -271,7 +271,7 @@ public class StencilListBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void stencilPaste180(final SnipeData v)
+    private void stencilPaste180(final SnipeData v)
     {
         if (this.filename.matches("NoFileLoaded"))
         {
@@ -474,7 +474,7 @@ public class StencilListBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void stencilPaste270(final SnipeData v)
+    private void stencilPaste270(final SnipeData v)
     {
         if (this.filename.matches("NoFileLoaded"))
         {
@@ -685,7 +685,7 @@ public class StencilListBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void stencilPaste90(final SnipeData v)
+    private void stencilPaste90(final SnipeData v)
     {
         if (this.filename.matches("NoFileLoaded"))
         {

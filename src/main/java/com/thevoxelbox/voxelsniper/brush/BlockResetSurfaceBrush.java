@@ -1,13 +1,12 @@
 package com.thevoxelbox.voxelsniper.brush;
 
-import java.util.ArrayList;
-
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
-
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
+
+import java.util.ArrayList;
 
 /**
  * This brush only looks for solid blocks, and then changes those plus any air blocks touching them. If it works, this brush should be faster than the original
@@ -58,7 +57,7 @@ public class BlockResetSurfaceBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void applyBrush(final SnipeData v)
+    private void applyBrush(final SnipeData v)
     {
         final World world = this.getWorld();
 
@@ -137,7 +136,7 @@ public class BlockResetSurfaceBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void resetBlock(Block block, final byte oldData)
+    private void resetBlock(Block block, final byte oldData)
     {
         block.setTypeIdAndData(block.getTypeId(), (byte) ((block.getData() + 1) & 0xf), true);
         block.setTypeIdAndData(block.getTypeId(), oldData, true);

@@ -14,20 +14,7 @@ public class NullableIntegerStringParser extends StringParser
 {
 
     @SuppressWarnings("unused")
-	private static final NullableIntegerStringParser INSTANCE = new NullableIntegerStringParser();
-
-    /**
-     * Returns a {@link com.thevoxelbox.voxelsniper.jsap.NullableIntegerStringParser}.
-     *
-     *
-     * Convenient access to the only instance returned by this method is available through {@link com.martiansoftware.jsap.JSAP#INTEGER_PARSER}.
-     *
-     * @return a {@link com.thevoxelbox.voxelsniper.jsap.NullableIntegerStringParser}.
-     */
-    public static NullableIntegerStringParser getParser()
-    {
-        return new NullableIntegerStringParser();
-    }
+    private static final NullableIntegerStringParser INSTANCE = new NullableIntegerStringParser();
 
     /**
      * Creates a new IntegerStringParser.
@@ -40,16 +27,25 @@ public class NullableIntegerStringParser extends StringParser
     }
 
     /**
+     * Returns a {@link com.thevoxelbox.voxelsniper.jsap.NullableIntegerStringParser}.
+     * <p>
+     * <p>
+     * Convenient access to the only instance returned by this method is available through {@link com.martiansoftware.jsap.JSAP#INTEGER_PARSER}.
+     *
+     * @return a {@link com.thevoxelbox.voxelsniper.jsap.NullableIntegerStringParser}.
+     */
+    public static NullableIntegerStringParser getParser()
+    {
+        return new NullableIntegerStringParser();
+    }
+
+    /**
      * Parses the specified argument into an Integer. This method delegates the parsing to <code>Integer.decode(arg)</code>. If <code>Integer.decode()</code>
      * throws a NumberFormatException, it is encapsulated into a ParseException and re-thrown.
      *
-     * @param arg
-     *         the argument to parse
-     *
+     * @param arg the argument to parse
      * @return an Integer object with the value contained in the specified argument.
-     *
-     * @throws com.martiansoftware.jsap.ParseException
-     *         if <code>Integer.decode(arg)</code> throws a NumberFormatException.
+     * @throws com.martiansoftware.jsap.ParseException if <code>Integer.decode(arg)</code> throws a NumberFormatException.
      * @see Integer
      * @see com.martiansoftware.jsap.StringParser#parse(String)
      */

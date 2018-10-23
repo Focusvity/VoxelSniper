@@ -1,19 +1,18 @@
 package com.thevoxelbox.voxelsniper.jsap;
 
+import com.martiansoftware.jsap.JSAP;
+import com.martiansoftware.jsap.JSAPException;
+import com.martiansoftware.jsap.JSAPResult;
+import com.martiansoftware.jsap.Switch;
+import com.martiansoftware.util.StringUtils;
+import org.bukkit.ChatColor;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-
-import com.martiansoftware.jsap.JSAP;
-import com.martiansoftware.jsap.JSAPException;
-import com.martiansoftware.jsap.JSAPResult;
-import com.martiansoftware.jsap.Switch;
-import com.martiansoftware.util.StringUtils;
-
-import org.bukkit.ChatColor;
 
 /**
  * JSAP parser with help generating code.
@@ -54,11 +53,8 @@ public class HelpJSAP extends JSAP
      * @param explanation
      * @param screenWidth
      * @param resourceName
-     *
-     * @throws java.io.IOException
-     *         if an I/O error occurs
-     * @throws com.martiansoftware.jsap.JSAPException
-     *         if the configuration is not valid
+     * @throws java.io.IOException                    if an I/O error occurs
+     * @throws com.martiansoftware.jsap.JSAPException if the configuration is not valid
      */
     public HelpJSAP(final String name, final String explanation, final int screenWidth, final String resourceName) throws IOException, JSAPException
     {
@@ -82,11 +78,8 @@ public class HelpJSAP extends JSAP
      * @param explanation
      * @param screenWidth
      * @param jsapXML
-     *
-     * @throws java.io.IOException
-     *         if an I/O error occurs
-     * @throws com.martiansoftware.jsap.JSAPException
-     *         if the configuration is not valid
+     * @throws java.io.IOException                    if an I/O error occurs
+     * @throws com.martiansoftware.jsap.JSAPException if the configuration is not valid
      */
     public HelpJSAP(final String name, final String explanation, final int screenWidth, final URL jsapXML) throws IOException, JSAPException
     {
@@ -114,8 +107,7 @@ public class HelpJSAP extends JSAP
     }
 
     /**
-     * @param explanation
-     *         the explanation to set
+     * @param explanation the explanation to set
      */
     public final void setExplanation(final String explanation)
     {
@@ -131,8 +123,7 @@ public class HelpJSAP extends JSAP
     }
 
     /**
-     * @param name
-     *         the name to set
+     * @param name the name to set
      */
     public final void setName(final String name)
     {
@@ -148,8 +139,7 @@ public class HelpJSAP extends JSAP
     }
 
     /**
-     * @param screenWidth
-     *         the screenWidth to set
+     * @param screenWidth the screenWidth to set
      */
     public final void setScreenWidth(final int screenWidth)
     {
@@ -158,7 +148,6 @@ public class HelpJSAP extends JSAP
 
     /**
      * @param jsapResult
-     *
      * @return if something has been written on writer.
      */
     public final List<String> writeHelpOrErrorMessageIfRequired(final JSAPResult jsapResult)

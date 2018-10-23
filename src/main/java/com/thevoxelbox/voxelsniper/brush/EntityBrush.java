@@ -2,7 +2,6 @@ package com.thevoxelbox.voxelsniper.brush;
 
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
-
 import org.bukkit.ChatColor;
 import org.bukkit.entity.EntityType;
 
@@ -51,7 +50,7 @@ public class EntityBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     public final void info(final Message vm)
     {
         vm.brushMessage(ChatColor.LIGHT_PURPLE + "Entity brush" + " (" + this.entityType.getName() + ")");
@@ -59,7 +58,7 @@ public class EntityBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     public final void parameters(final String[] par, final SnipeData v)
     {
         if (par[1].equalsIgnoreCase("info"))

@@ -34,11 +34,11 @@ public class UndoTest
             BlockState blockState = Mockito.mock(BlockState.class);
             Location location = new Location(world, 0, 0, i);
             Mockito.when(block.getLocation())
-                   .thenReturn(location);
+                    .thenReturn(location);
             Mockito.when(block.getState())
-                   .thenReturn(blockState);
+                    .thenReturn(blockState);
             Mockito.when(blockState.getLocation())
-                   .thenReturn(location);
+                    .thenReturn(location);
             undo.put(block);
         }
         Assert.assertEquals(5, undo.getSize());
@@ -46,11 +46,11 @@ public class UndoTest
         BlockState blockState = Mockito.mock(BlockState.class);
         Location location = new Location(world, 0, 0, 6);
         Mockito.when(block.getLocation())
-               .thenReturn(location);
+                .thenReturn(location);
         Mockito.when(block.getState())
-               .thenReturn(blockState);
+                .thenReturn(blockState);
         Mockito.when(blockState.getLocation())
-               .thenReturn(location);
+                .thenReturn(location);
         undo.put(block);
         Assert.assertEquals(6, undo.getSize());
         undo.put(block);
@@ -66,11 +66,11 @@ public class UndoTest
         BlockState blockState = Mockito.mock(BlockState.class);
         Location location = new Location(world, 0, 0, 0);
         Mockito.when(block.getLocation())
-               .thenReturn(location);
+                .thenReturn(location);
         Mockito.when(block.getState())
-               .thenReturn(blockState);
+                .thenReturn(blockState);
         Mockito.when(blockState.getLocation())
-               .thenReturn(location);
+                .thenReturn(location);
 
         undo.put(block);
     }
@@ -84,43 +84,43 @@ public class UndoTest
         BlockState normalBlockState = Mockito.mock(BlockState.class);
         Location normalBlockLocation = new Location(world, 0, 0, 0);
         Mockito.when(normalBlock.getLocation())
-               .thenReturn(normalBlockLocation);
+                .thenReturn(normalBlockLocation);
         Mockito.when(normalBlock.getState())
-               .thenReturn(normalBlockState);
+                .thenReturn(normalBlockState);
         Mockito.when(normalBlock.getType())
-               .thenReturn(Material.STONE);
+                .thenReturn(Material.STONE);
         Mockito.when(normalBlockState.getLocation())
-               .thenReturn(normalBlockLocation);
+                .thenReturn(normalBlockLocation);
         Mockito.when(normalBlockState.getBlock())
-               .thenReturn(normalBlock);
+                .thenReturn(normalBlock);
 
         Block fragileBlock = Mockito.mock(Block.class);
         BlockState fragileBlockState = Mockito.mock(BlockState.class);
         Location fragileBlockLocation = new Location(world, 0, 0, 1);
         Mockito.when(fragileBlock.getLocation())
-               .thenReturn(fragileBlockLocation);
+                .thenReturn(fragileBlockLocation);
         Mockito.when(fragileBlock.getState())
-               .thenReturn(fragileBlockState);
+                .thenReturn(fragileBlockState);
         Mockito.when(fragileBlock.getType())
-               .thenReturn(Material.TORCH);
+                .thenReturn(Material.TORCH);
         Mockito.when(fragileBlockState.getLocation())
-               .thenReturn(fragileBlockLocation);
+                .thenReturn(fragileBlockLocation);
         Mockito.when(fragileBlockState.getBlock())
-               .thenReturn(fragileBlock);
+                .thenReturn(fragileBlock);
 
         Block waterBlock = Mockito.mock(Block.class);
         BlockState waterBlockState = Mockito.mock(BlockState.class);
         Location waterBlockLocation = new Location(world, 0, 0, 2);
         Mockito.when(waterBlock.getLocation())
-               .thenReturn(waterBlockLocation);
+                .thenReturn(waterBlockLocation);
         Mockito.when(waterBlock.getState())
-               .thenReturn(waterBlockState);
+                .thenReturn(waterBlockState);
         Mockito.when(waterBlock.getType())
-               .thenReturn(Material.WATER);
+                .thenReturn(Material.WATER);
         Mockito.when(waterBlockState.getLocation())
-               .thenReturn(waterBlockLocation);
+                .thenReturn(waterBlockLocation);
         Mockito.when(waterBlockState.getBlock())
-               .thenReturn(waterBlock);
+                .thenReturn(waterBlock);
 
 
         undo.put(waterBlock);

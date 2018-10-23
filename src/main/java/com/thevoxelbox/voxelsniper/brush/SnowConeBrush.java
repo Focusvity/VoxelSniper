@@ -17,7 +17,7 @@ import org.bukkit.block.BlockFace;
 public class SnowConeBrush extends Brush
 {
     @SuppressWarnings("deprecation")
-	private void addSnow(final SnipeData v, Block targetBlock)
+    private void addSnow(final SnipeData v, Block targetBlock)
     {
         int brushSize;
         int blockPositionX = targetBlock.getX();

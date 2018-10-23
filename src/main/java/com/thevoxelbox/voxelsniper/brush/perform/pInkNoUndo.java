@@ -5,7 +5,6 @@
 package com.thevoxelbox.voxelsniper.brush.perform;
 
 import com.thevoxelbox.voxelsniper.Message;
-
 import org.bukkit.block.Block;
 
 /**
@@ -36,7 +35,7 @@ public class pInkNoUndo extends vPerformer
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     public void perform(Block b)
     {
         if (b.getData() != d)

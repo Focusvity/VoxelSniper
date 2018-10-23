@@ -3,7 +3,6 @@ package com.thevoxelbox.voxelsniper.brush;
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.util.BlockWrapper;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
@@ -30,7 +29,7 @@ public class Rot2DvertBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void getMatrix()
+    private void getMatrix()
     {
         this.brushSize = (this.bSize * 2) + 1;
 

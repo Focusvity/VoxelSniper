@@ -41,7 +41,7 @@ public class SplatterOverlayBrush extends PerformBrush
     }
 
     @SuppressWarnings("deprecation")
-	private void sOverlay(final SnipeData v)
+    private void sOverlay(final SnipeData v)
     {
 
         // Splatter Time

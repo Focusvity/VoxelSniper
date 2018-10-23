@@ -20,8 +20,8 @@ public class Brushes
     /**
      * Register a brush for VoxelSniper to be able to use.
      *
-     * @param clazz        Brush implementing IBrush interface.
-     * @param handles      Handles under which the brush can be accessed ingame.
+     * @param clazz   Brush implementing IBrush interface.
+     * @param handles Handles under which the brush can be accessed ingame.
      */
     public void registerSniperBrush(Class<? extends IBrush> clazz, String... handles)
     {
@@ -73,7 +73,6 @@ public class Brushes
     }
 
     /**
-     *
      * @param clazz Brush class
      * @return All Sniper registered handles for the brush.
      */
@@ -85,7 +84,7 @@ public class Brushes
     /**
      * @return Immutable Multimap copy of all the registered brushes
      */
-    public Multimap<Class<?extends IBrush>, String> getRegisteredBrushesMultimap()
+    public Multimap<Class<? extends IBrush>, String> getRegisteredBrushesMultimap()
     {
         return ImmutableMultimap.copyOf(brushes);
     }

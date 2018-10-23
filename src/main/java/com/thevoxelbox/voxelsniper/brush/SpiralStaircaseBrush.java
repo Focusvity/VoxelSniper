@@ -26,7 +26,7 @@ public class SpiralStaircaseBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void buildStairWell(final SnipeData v, Block targetBlock)
+    private void buildStairWell(final SnipeData v, Block targetBlock)
     {
         if (v.getVoxelHeight() < 1)
         {
@@ -399,7 +399,7 @@ public class SpiralStaircaseBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void digStairWell(final SnipeData v, Block targetBlock)
+    private void digStairWell(final SnipeData v, Block targetBlock)
     {
         if (v.getVoxelHeight() < 1)
         {

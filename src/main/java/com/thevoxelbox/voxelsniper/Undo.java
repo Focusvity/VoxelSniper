@@ -2,15 +2,7 @@ package com.thevoxelbox.voxelsniper;
 
 import com.google.common.collect.Sets;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
-import org.bukkit.block.BlockState;
-import org.bukkit.block.BrewingStand;
-import org.bukkit.block.Chest;
-import org.bukkit.block.CreatureSpawner;
-import org.bukkit.block.Dispenser;
-import org.bukkit.block.Furnace;
-import org.bukkit.block.NoteBlock;
-import org.bukkit.block.Sign;
+import org.bukkit.block.*;
 import org.bukkit.util.Vector;
 
 import java.util.EnumSet;
@@ -22,7 +14,8 @@ import java.util.Set;
  * Holds {@link BlockState}s that can be later on used to reset those block
  * locations back to the recorded states.
  */
-public class Undo {
+public class Undo
+{
 
     private static final Set<Material> FALLING_MATERIALS = EnumSet.of(
             Material.WATER,
@@ -77,7 +70,8 @@ public class Undo {
     /**
      * Default constructor of a Undo container.
      */
-    public Undo() {
+    public Undo()
+    {
         all = new LinkedList<BlockState>();
         falloff = new LinkedList<BlockState>();
         dropdown = new LinkedList<BlockState>();
@@ -88,7 +82,8 @@ public class Undo {
      *
      * @return size of the Undo collection
      */
-    public int getSize() {
+    public int getSize()
+    {
         return containing.size();
     }
 
@@ -97,17 +92,24 @@ public class Undo {
      *
      * @param block Block to be added
      */
-    public void put(Block block) {
+    public void put(Block block)
+    {
         Vector pos = block.getLocation().toVector();
-        if (this.containing.contains(pos)) {
+        if (this.containing.contains(pos))
+        {
             return;
         }
         this.containing.add(pos);
-        if (Undo.FALLING_MATERIALS.contains(block.getType())) {
+        if (Undo.FALLING_MATERIALS.contains(block.getType()))
+        {
             dropdown.add(block.getState());
-        } else if (Undo.FALLOFF_MATERIALS.contains(block.getType())) {
+        }
+        else if (Undo.FALLOFF_MATERIALS.contains(block.getType()))
+        {
             falloff.add(block.getState());
-        } else {
+        }
+        else
+        {
             all.add(block.getState());
         }
     }
@@ -116,19 +118,23 @@ public class Undo {
      * Set the blockstates of all recorded blocks back to the state when they
      * were inserted.
      */
-    public void undo() {
+    public void undo()
+    {
 
-        for (BlockState blockState : all) {
+        for (BlockState blockState : all)
+        {
             blockState.update(true, false);
             updateSpecialBlocks(blockState);
         }
 
-        for (BlockState blockState : falloff) {
+        for (BlockState blockState : falloff)
+        {
             blockState.update(true, false);
             updateSpecialBlocks(blockState);
         }
 
-        for (BlockState blockState : dropdown) {
+        for (BlockState blockState : dropdown)
+        {
             blockState.update(true, false);
             updateSpecialBlocks(blockState);
         }
@@ -137,31 +143,46 @@ public class Undo {
     /**
      * @param blockState
      */
-    private void updateSpecialBlocks(BlockState blockState) {
+    private void updateSpecialBlocks(BlockState blockState)
+    {
         BlockState currentState = blockState.getBlock().getState();
-        if (blockState instanceof BrewingStand && currentState instanceof BrewingStand) {
+        if (blockState instanceof BrewingStand && currentState instanceof BrewingStand)
+        {
             ((BrewingStand) currentState).getInventory().setContents(((BrewingStand) blockState).getInventory().getContents());
-        } else if (blockState instanceof Chest && currentState instanceof Chest) {
+        }
+        else if (blockState instanceof Chest && currentState instanceof Chest)
+        {
             ((Chest) currentState).getInventory().setContents(((Chest) blockState).getInventory().getContents());
             ((Chest) currentState).getBlockInventory().setContents(((Chest) blockState).getBlockInventory().getContents());
             currentState.update();
-        } else if (blockState instanceof CreatureSpawner && currentState instanceof CreatureSpawner) {
+        }
+        else if (blockState instanceof CreatureSpawner && currentState instanceof CreatureSpawner)
+        {
             ((CreatureSpawner) currentState).setSpawnedType(((CreatureSpawner) currentState).getSpawnedType());
             currentState.update();
-        } else if (blockState instanceof Dispenser && currentState instanceof Dispenser) {
+        }
+        else if (blockState instanceof Dispenser && currentState instanceof Dispenser)
+        {
             ((Dispenser) currentState).getInventory().setContents(((Dispenser) blockState).getInventory().getContents());
             currentState.update();
-        } else if (blockState instanceof Furnace && currentState instanceof Furnace) {
+        }
+        else if (blockState instanceof Furnace && currentState instanceof Furnace)
+        {
             ((Furnace) currentState).getInventory().setContents(((Furnace) blockState).getInventory().getContents());
             ((Furnace) currentState).setBurnTime(((Furnace) blockState).getBurnTime());
             ((Furnace) currentState).setCookTime(((Furnace) blockState).getCookTime());
             currentState.update();
-        } else if (blockState instanceof NoteBlock && currentState instanceof NoteBlock) {
+        }
+        else if (blockState instanceof NoteBlock && currentState instanceof NoteBlock)
+        {
             ((NoteBlock) currentState).setNote(((NoteBlock) blockState).getNote());
             currentState.update();
-        } else if (blockState instanceof Sign && currentState instanceof Sign) {
+        }
+        else if (blockState instanceof Sign && currentState instanceof Sign)
+        {
             int i = 0;
-            for (String text : ((Sign) blockState).getLines()) {
+            for (String text : ((Sign) blockState).getLines())
+            {
                 ((Sign) currentState).setLine(i++, text);
             }
             currentState.update();

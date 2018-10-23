@@ -2,7 +2,6 @@ package com.thevoxelbox.voxelsniper.brush;
 
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
-
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.BlockFace;
@@ -144,7 +143,7 @@ public class ScannerBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     protected final void arrow(final SnipeData v)
     {
         this.checkFor = Material.getMaterial(v.getVoxelId());
@@ -152,7 +151,7 @@ public class ScannerBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     protected final void powder(final SnipeData v)
     {
         this.checkFor = Material.getMaterial(v.getVoxelId());

@@ -3,7 +3,6 @@ package com.thevoxelbox.voxelsniper.brush;
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.Undo;
-
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 
@@ -38,7 +37,7 @@ public class CopyPastaBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void doCopy(final SnipeData v)
+    private void doCopy(final SnipeData v)
     {
         for (int i = 0; i < 3; i++)
         {
@@ -76,7 +75,7 @@ public class CopyPastaBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void doPasta(final SnipeData v)
+    private void doPasta(final SnipeData v)
     {
         final Undo undo = new Undo();
 

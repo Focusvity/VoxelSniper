@@ -1,6 +1,5 @@
 package com.thevoxelbox.voxelsniper;
 
-import com.google.common.base.Preconditions;
 import com.thevoxelbox.voxelsniper.brush.*;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -8,20 +7,24 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-
 /**
  * Bukkit extension point.
  */
 public class VoxelSniper extends JavaPlugin
 {
     private static VoxelSniper instance;
-    private SniperManager sniperManager = new SniperManager(this);
     private final VoxelSniperListener voxelSniperListener = new VoxelSniperListener(this);
+    private SniperManager sniperManager = new SniperManager(this);
     private VoxelSniperConfiguration voxelSniperConfiguration;
+    private Brushes brushManager = new Brushes();
+
+    /**
+     * @return {@link VoxelSniper}
+     */
+    public static VoxelSniper getInstance()
+    {
+        return VoxelSniper.instance;
+    }
 
     /**
      * Returns {@link com.thevoxelbox.voxelsniper.Brushes} for current instance.
@@ -31,16 +34,6 @@ public class VoxelSniper extends JavaPlugin
     public Brushes getBrushManager()
     {
         return brushManager;
-    }
-
-    private Brushes brushManager = new Brushes();
-
-    /**
-     * @return {@link VoxelSniper}
-     */
-    public static VoxelSniper getInstance()
-    {
-        return VoxelSniper.instance;
     }
 
     /**

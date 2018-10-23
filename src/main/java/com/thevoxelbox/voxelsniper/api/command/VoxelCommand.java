@@ -6,11 +6,11 @@ import org.bukkit.entity.Player;
 public abstract class VoxelCommand
 {
 
+    protected final VoxelSniper plugin;
     private final String name;
     private String description = "";
     private String permission = "";
     private String identifier = "";
-    protected final VoxelSniper plugin;
 
     public VoxelCommand(String name, final VoxelSniper plugin)
     {
@@ -25,24 +25,24 @@ public abstract class VoxelCommand
         return description;
     }
 
-    public String getPermission()
-    {
-        return this.permission;
-    }
-
-    public String getName()
-    {
-        return this.name;
-    }
-
     public void setDescription(String description)
     {
         this.description = description;
     }
 
+    public String getPermission()
+    {
+        return this.permission;
+    }
+
     public void setPermission(String permission)
     {
         this.permission = permission;
+    }
+
+    public String getName()
+    {
+        return this.name;
     }
 
     public String getIdentifier()

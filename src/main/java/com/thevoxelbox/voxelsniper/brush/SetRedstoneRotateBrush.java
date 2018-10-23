@@ -56,7 +56,7 @@ public class SetRedstoneRotateBrush extends Brush
     }
 
     @SuppressWarnings("deprecation")
-	private void perform(final Block bl)
+    private void perform(final Block bl)
     {
         if (bl.getType() == Material.DIODE_BLOCK_ON || bl.getType() == Material.DIODE_BLOCK_OFF)
         {

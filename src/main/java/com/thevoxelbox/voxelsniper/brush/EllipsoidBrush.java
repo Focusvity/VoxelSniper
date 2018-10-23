@@ -8,7 +8,6 @@ import org.bukkit.block.Block;
 
 /**
  * http://www.voxelwiki.com/minecraft/Voxelsniper#Ellipsoid_Brush
- *
  */
 public class EllipsoidBrush extends PerformBrush
 {

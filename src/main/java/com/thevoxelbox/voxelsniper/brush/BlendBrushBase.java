@@ -2,7 +2,6 @@ package com.thevoxelbox.voxelsniper.brush;
 
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
-
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 
@@ -13,8 +12,6 @@ import org.bukkit.Material;
 public abstract class BlendBrushBase extends Brush
 {
     private static int maxBlockMaterialID;
-    protected boolean excludeAir = true;
-    protected boolean excludeWater = true;
 
     static
     {
@@ -23,6 +20,25 @@ public abstract class BlendBrushBase extends Brush
         {
             maxBlockMaterialID = ((material.isBlock() && (material.getId() > maxBlockMaterialID)) ? material.getId() : maxBlockMaterialID);
         }
+    }
+
+    protected boolean excludeAir = true;
+    protected boolean excludeWater = true;
+
+    /**
+     * @return
+     */
+    protected static int getMaxBlockMaterialID()
+    {
+        return maxBlockMaterialID;
+    }
+
+    /**
+     * @param maxBlockMaterialID
+     */
+    protected static void setMaxBlockMaterialID(int maxBlockMaterialID)
+    {
+        BlendBrushBase.maxBlockMaterialID = maxBlockMaterialID;
     }
 
     /**
@@ -64,22 +80,6 @@ public abstract class BlendBrushBase extends Brush
                 v.sendMessage(ChatColor.AQUA + "Water Mode: " + (this.excludeWater ? "exclude" : "include"));
             }
         }
-    }
-
-    /**
-     * @return
-     */
-    protected static int getMaxBlockMaterialID()
-    {
-        return maxBlockMaterialID;
-    }
-
-    /**
-     * @param maxBlockMaterialID
-     */
-    protected static void setMaxBlockMaterialID(int maxBlockMaterialID)
-    {
-        BlendBrushBase.maxBlockMaterialID = maxBlockMaterialID;
     }
 
     /**

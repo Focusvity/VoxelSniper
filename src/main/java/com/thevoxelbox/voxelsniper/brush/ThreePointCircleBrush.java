@@ -209,6 +209,12 @@ public class ThreePointCircleBrush extends PerformBrush
         }
     }
 
+    @Override
+    public String getPermissionNode()
+    {
+        return "voxelsniper.brush.threepointcircle";
+    }
+
     /**
      * Enumeration on Tolerance values.
      *
@@ -228,11 +234,5 @@ public class ThreePointCircleBrush extends PerformBrush
         {
             return this.value;
         }
-    }
-
-    @Override
-    public String getPermissionNode()
-    {
-        return "voxelsniper.brush.threepointcircle";
     }
 }

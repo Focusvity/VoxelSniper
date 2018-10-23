@@ -68,13 +68,13 @@ public class OverlayBrush extends PerformBrush
     }
 
     @SuppressWarnings("deprecation")
-	private boolean isIgnoredBlock(int materialId)
+    private boolean isIgnoredBlock(int materialId)
     {
         return materialId == 9 || materialId == 8 || Material.getMaterial(materialId).isTransparent() || materialId == Material.CACTUS.getId();
     }
 
     @SuppressWarnings("deprecation")
-	private boolean isOverrideableMaterial(int materialId)
+    private boolean isOverrideableMaterial(int materialId)
     {
         if (allBlocks && !(materialId == Material.AIR.getId()))
         {
@@ -210,7 +210,8 @@ public class OverlayBrush extends PerformBrush
             }
             if (parameter.startsWith("d"))
             {
-                try {
+                try
+                {
                     this.depth = Integer.parseInt(parameter.replace("d", ""));
 
                     if (this.depth < 1)
@@ -219,7 +220,9 @@ public class OverlayBrush extends PerformBrush
                     }
 
                     v.sendMessage(ChatColor.AQUA + "Depth set to " + this.depth);
-                } catch (NumberFormatException e)  {
+                }
+                catch (NumberFormatException e)
+                {
                     v.sendMessage(ChatColor.RED + "Depth isn't a number.");
                 }
             }

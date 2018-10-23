@@ -47,7 +47,7 @@ public class PunishBrush extends PerformBrush
     }
 
     @SuppressWarnings("deprecation")
-	private void applyPunishment(final LivingEntity entity, final SnipeData v)
+    private void applyPunishment(final LivingEntity entity, final SnipeData v)
     {
         switch (this.punishment)
         {
@@ -355,6 +355,12 @@ public class PunishBrush extends PerformBrush
 
     }
 
+    @Override
+    public String getPermissionNode()
+    {
+        return "voxelsniper.brush.punish";
+    }
+
     /**
      * @author Monofraps
      */
@@ -367,11 +373,5 @@ public class PunishBrush extends PerformBrush
         SATURATION, SLOW_DIGGING, SPEED, WATER_BREATHING, WEAKNESS, WITHER,
         // MikeMatrix
         FORCE, HYPNO
-    }
-
-    @Override
-    public String getPermissionNode()
-    {
-        return "voxelsniper.brush.punish";
     }
 }

@@ -1,15 +1,14 @@
 package com.thevoxelbox.voxelsniper.brush;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.thevoxelbox.voxelsniper.Message;
 import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.Undo;
-
 import org.bukkit.block.Block;
 import org.bukkit.util.NumberConversions;
 import org.bukkit.util.Vector;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * http://www.voxelwiki.com/minecraft/Voxelsniper#Dome_Brush
@@ -41,7 +40,7 @@ public class DomeBrush extends Brush
      * @param targetBlock
      */
     @SuppressWarnings("deprecation")
-	private void generateDome(final SnipeData v, final Block targetBlock)
+    private void generateDome(final SnipeData v, final Block targetBlock)
     {
 
         if (v.getVoxelHeight() == 0)
