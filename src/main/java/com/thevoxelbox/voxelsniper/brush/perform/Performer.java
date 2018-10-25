@@ -5,6 +5,7 @@
 package com.thevoxelbox.voxelsniper.brush.perform;
 
 import com.thevoxelbox.voxelsniper.Message;
+import com.thevoxelbox.voxelsniper.SnipeData;
 
 /**
  * @author Voxel
@@ -12,7 +13,7 @@ import com.thevoxelbox.voxelsniper.Message;
 public interface Performer
 {
 
-    public void parse(String[] args, com.thevoxelbox.voxelsniper.SnipeData v);
+    public void parse(String[] args, SnipeData v);
 
     public void showInfo(Message vm);
 }

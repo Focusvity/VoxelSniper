@@ -4,38 +4,38 @@ version: ${project.build.version}
 website: ${project.url}
 authors: [przerwap, MikeMatrix, Gavjenks, giltwist, psanker, Deamon5550, DivineRage]
 description: ${project.description}
-softdepend: [VoxelModPackPlugin]
+softdepend: [VoxelModPackPlugin, CoreProtect]
 commands:
-  paint:
+  vpaint:
     description: Change the selected painting to another painting.
     usage: |
            /<command>
            Example: /<command> -- Cycles through paintings. You must be adjacent to the painting and aiming at it.
-  goto:
+  vgoto:
     description: Warps to the specified coordinates.
     permission: voxelsniper.goto
     usage: |
            /<command> [X] [Z]
            Example: /<command> 100 -100 -- Takes the user to the coordinates X: 100, Z: -100. The Y-coordinate will always be 1 more than the Y-coordinate of the highest block at the X and Z-coordinates provided.
-  u:
+  vu:
     description: Undoes the last snipe.
     permission: voxelsniper.sniper
     usage: |
            /<command>
            Example: /<command> -- Undoes your most recent snipe.
-  uu:
+  vuu:
     description: UndoUser undoes another sniper user's snipes.
     permission: voxelsniper.sniper
     usage: |
            /<command> [playername]
            Example: /<command> bads -- Undoes BadSniper's last snipe.  BadSniper must be online for name detection to function. Truncation allowed.
-  d:
+  vd:
     description: VoxelSniper Default.
     permission: voxelsniper.sniper
     usage: |
            /<command>
            Example: /<command> -- Resets the brush settings to their default values.
-  p:
+  vp:
     description: Voxelsniper performer.
     permission: voxelsniper.sniper
     aliases: [perf, performer]
@@ -44,67 +44,67 @@ commands:
            Example: /<command> -- Sets the performer of the current brush to "m".
            /<command> <performer>
            Example: /<command> -- Sets the performer of the current brush to <performer>.
-  vs:
+  vvs:
     description: VoxelSniper Settings.
     permission: voxelsniper.sniper
     usage: |
            /<command>
            Example: /<command> -- Returns the current brush settings.
-  vc:
+  vvc:
     description: VoxelCentroid.
     permission: voxelsniper.sniper
     usage: |
            /<command>
            Example: /<command> -1 -- Sets the Clone Cylinder's Y value for the base relative to the Clone Point.
-  vh:
+  vvh:
     description: VoxelHeight.
     permission: voxelsniper.sniper
     usage: |
            /<command> [voxel-height]
            Example: /<command> -- Sets the brush height.
-  vi:
+  vvi:
     description: VoxelInk (Data Value).
     permission: voxelsniper.sniper
     usage: |
            /<command> [0-16]
            Example: /<command> -- sets a data value of 6 (e.g. pink wool).
-  vr:
+  vvr:
     description: VoxelReplace.
     permission: voxelsniper.sniper
     usage: |
            /<command> [0-159]
            Example: /<command> 12 -- Sets a replace brush to select sand blocks for replacement.
-  vl:
+  vvl:
     description: VoxelBlockExclusion list
     permission: voxelsniper.sniper
     usage: |
       /<command>
       Example: /<command> 89 -5 -- Adds glowstone to the voxel list and removes planks from the voxel list.
-  vir:
+  vvir:
     description: VoxelInkReplace.
     permission: voxelsniper.sniper
     usage: |
            /<command> [0-16]
            Example: /<command> 12 -- Sets a replace ink brush to select data 6 blocks for replacement.
-  v:
+  vv:
     description: Voxel input.
     permission: voxelsniper.sniper
     usage: |
            /<command> [0-159]
            Example: /<command> 1 -- Loads the sniper with Stone blocks.
-  b:
+  vb:
     description: Brush.
     permission: voxelsniper.sniper
     usage: |
            /<command> [brush-size]
            Example: /<command> 5 -- Sets a brush radius size of 5 (11 spaces across).
            Example: /<command> b cm -- Sets your brush to the Ball Brush with the combo-mat performer.
-  btool:
+  vbtool:
     description: Brush Tool Command.
     permission: voxelsniper.sniper
     usage : |
             /<command> -- Prints out command usage information.
-  vchunk:
+  vvchunk:
     description: Update the chunk you are standing in.
     usage: |
            /<command>

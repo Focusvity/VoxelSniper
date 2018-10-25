@@ -5,6 +5,7 @@
 package com.thevoxelbox.voxelsniper.brush.perform;
 
 import com.thevoxelbox.voxelsniper.Message;
+import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.brush.Brush;
 import com.thevoxelbox.voxelsniper.event.SniperBrushChangedEvent;
 import org.bukkit.Bukkit;
@@ -25,7 +26,7 @@ public abstract class PerformBrush extends Brush implements Performer
     }
 
     @Override
-    public void parse(String[] args, com.thevoxelbox.voxelsniper.SnipeData v)
+    public void parse(String[] args, SnipeData v)
     {
         String handle = args[0];
         if (PerformerE.has(handle))
@@ -72,7 +73,7 @@ public abstract class PerformBrush extends Brush implements Performer
         return returnValue;
     }
 
-    public void initP(com.thevoxelbox.voxelsniper.SnipeData v)
+    public void initP(SnipeData v)
     {
         current.init(v);
         current.setUndo();

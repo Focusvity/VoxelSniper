@@ -5,6 +5,7 @@
 package com.thevoxelbox.voxelsniper.brush.perform;
 
 import com.thevoxelbox.voxelsniper.Message;
+import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.util.VoxelList;
 import org.bukkit.block.Block;
 
@@ -31,7 +32,7 @@ public class pIncludeInk extends vPerformer
     }
 
     @Override
-    public void init(com.thevoxelbox.voxelsniper.SnipeData v)
+    public void init(SnipeData v)
     {
         w = v.getWorld();
         data = v.getData();

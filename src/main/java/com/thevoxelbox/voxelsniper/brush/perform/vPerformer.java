@@ -5,6 +5,7 @@
 package com.thevoxelbox.voxelsniper.brush.perform;
 
 import com.thevoxelbox.voxelsniper.Message;
+import com.thevoxelbox.voxelsniper.SnipeData;
 import com.thevoxelbox.voxelsniper.Undo;
 import org.bukkit.World;
 import org.bukkit.block.Block;
@@ -21,7 +22,7 @@ public abstract class vPerformer
 
     public abstract void info(Message vm);
 
-    public abstract void init(com.thevoxelbox.voxelsniper.SnipeData v);
+    public abstract void init(SnipeData v);
 
     public void setUndo()
     {

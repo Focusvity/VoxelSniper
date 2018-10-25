@@ -121,7 +121,7 @@ public class CopyPastaBrush extends Brush
     }
 
     @Override
-    protected final void arrow(final com.thevoxelbox.voxelsniper.SnipeData v)
+    protected final void arrow(final SnipeData v)
     {
         switch (this.points)
         {

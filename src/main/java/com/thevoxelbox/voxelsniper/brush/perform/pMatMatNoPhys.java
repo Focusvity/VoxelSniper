@@ -4,8 +4,12 @@
  */
 package com.thevoxelbox.voxelsniper.brush.perform;
 
+import com.thevoxelbox.voxelsniper.CoreProtectManager;
 import com.thevoxelbox.voxelsniper.Message;
+import com.thevoxelbox.voxelsniper.SnipeData;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 
 /**
  * @author Voxel
@@ -15,6 +19,7 @@ public class pMatMatNoPhys extends vPerformer
 
     private int i;
     private int r;
+    private Player player;
 
     public pMatMatNoPhys()
     {
@@ -22,11 +27,12 @@ public class pMatMatNoPhys extends vPerformer
     }
 
     @Override
-    public void init(com.thevoxelbox.voxelsniper.SnipeData v)
+    public void init(SnipeData v)
     {
         w = v.getWorld();
         i = v.getVoxelId();
         r = v.getReplaceId();
+        player = v.owner().getPlayer();
     }
 
     @Override
@@ -43,8 +49,13 @@ public class pMatMatNoPhys extends vPerformer
     {
         if (b.getTypeId() == r)
         {
+            if (b.getType() != Material.AIR)
+            {
+                CoreProtectManager.getCoreProtectAPI().logRemoval(player.getName(), b.getLocation(), b.getType(), b.getData());
+            }
             h.put(b);
             b.setTypeId(i, false);
+            CoreProtectManager.getCoreProtectAPI().logPlacement(player.getName(), b.getLocation(), Material.getMaterial(i), b.getData());
         }
     }
 

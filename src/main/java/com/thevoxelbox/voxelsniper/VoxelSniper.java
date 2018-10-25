@@ -83,9 +83,6 @@ public class VoxelSniper extends JavaPlugin
         registerBrushes();
         getLogger().info("Registered " + brushManager.registeredSniperBrushes() + " Sniper Brushes with " + brushManager.registeredSniperBrushHandles() + " handles.");
 
-        MetricsManager.getInstance().start();
-
-
         saveDefaultConfig();
         voxelSniperConfiguration = new VoxelSniperConfiguration(getConfig());
 
@@ -175,5 +172,4 @@ public class VoxelSniper extends JavaPlugin
         brushManager.registerSniperBrush(VoxelDiscFaceBrush.class, "vdf", "voxeldiscface");
         brushManager.registerSniperBrush(WarpBrush.class, "w", "warp");
     }
-
 }
