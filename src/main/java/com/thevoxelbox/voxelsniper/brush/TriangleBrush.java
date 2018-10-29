@@ -91,7 +91,7 @@ public class TriangleBrush extends PerformBrush
         lengthThree = Math.pow(Math.pow(this.vectorThree[0], 2) + Math.pow(this.vectorThree[1], 2) + Math.pow(this.vectorThree[2], 2), .5);
 
         // Bigger vector determines brush size
-        final int brushSize = (int) Math.ceil((lengthOne > lengthTwo) ? lengthOne : lengthTwo);
+        final int brushSize = (int)Math.ceil((lengthOne > lengthTwo) ? lengthOne : lengthTwo);
 
         // Calculate constant term
         final double planeConstant = this.normalVector[0] * this.coordsOne[0] + this.normalVector[1] * this.coordsOne[1] + this.normalVector[2] * this.coordsOne[2];
@@ -160,7 +160,7 @@ public class TriangleBrush extends PerformBrush
                     if (barycentric <= 1.1)
                     {
 
-                        this.current.perform(this.clampY((int) this.currentCoords[0], (int) this.currentCoords[1], (int) this.currentCoords[2]));
+                        this.current.perform(this.clampY((int)this.currentCoords[0], (int)this.currentCoords[1], (int)this.currentCoords[2]));
 
                     }
 
@@ -217,7 +217,7 @@ public class TriangleBrush extends PerformBrush
                     if (barycentric <= 1.1)
                     {
 
-                        this.current.perform(this.clampY((int) this.currentCoords[0], (int) this.currentCoords[1], (int) this.currentCoords[2]));
+                        this.current.perform(this.clampY((int)this.currentCoords[0], (int)this.currentCoords[1], (int)this.currentCoords[2]));
 
                     }
 
@@ -274,7 +274,7 @@ public class TriangleBrush extends PerformBrush
 
                     if (barycentric <= 1.1)
                     {
-                        this.current.perform(this.clampY((int) this.currentCoords[0], (int) this.currentCoords[1], (int) this.currentCoords[2]));
+                        this.current.perform(this.clampY((int)this.currentCoords[0], (int)this.currentCoords[1], (int)this.currentCoords[2]));
                     }
                 }
             } // END Z DEPENDENT

@@ -150,7 +150,7 @@ public class ErodeBrush extends Brush
                             }
                         }
 
-                        BlockWrapper currentMaterial = new BlockWrapper(null, Material.AIR, (byte) 0);
+                        BlockWrapper currentMaterial = new BlockWrapper(null, Material.AIR, (byte)0);
                         int amount = 0;
 
                         for (final BlockWrapper wrapper : blockCount.keySet())
@@ -206,7 +206,7 @@ public class ErodeBrush extends Brush
 
                         if (count >= erosionPreset.getErosionFaces())
                         {
-                            blockChangeTracker.put(currentPosition, new BlockWrapper(currentBlock.getBlock(), Material.AIR, (byte) 0), currentIteration);
+                            blockChangeTracker.put(currentPosition, new BlockWrapper(currentBlock.getBlock(), Material.AIR, (byte)0), currentIteration);
                         }
                     }
                 }
@@ -514,7 +514,7 @@ public class ErodeBrush extends Brush
         {
             if (obj instanceof ErosionPreset)
             {
-                ErosionPreset other = (ErosionPreset) obj;
+                ErosionPreset other = (ErosionPreset)obj;
                 return Objects.equal(this.erosionFaces, other.erosionFaces) && Objects.equal(this.erosionRecursion, other.erosionRecursion) && Objects.equal(this.fillFaces, other.fillFaces) && Objects.equal(this.fillRecursion, other.fillRecursion);
             }
             return false;

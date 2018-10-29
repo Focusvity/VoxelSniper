@@ -61,7 +61,7 @@ public class SetRedstoneRotateBrush extends Brush
         if (bl.getType() == Material.DIODE_BLOCK_ON || bl.getType() == Material.DIODE_BLOCK_OFF)
         {
             this.undo.put(bl);
-            bl.setData((((bl.getData() % 4) + 1 < 5) ? (byte) (bl.getData() + 1) : (byte) (bl.getData() - 4)));
+            bl.setData((((bl.getData() % 4) + 1 < 5) ? (byte)(bl.getData() + 1) : (byte)(bl.getData() - 4)));
         }
     }
 

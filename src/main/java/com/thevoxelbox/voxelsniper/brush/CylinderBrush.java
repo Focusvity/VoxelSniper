@@ -123,12 +123,12 @@ public class CylinderBrush extends PerformBrush
             }
             else if (parameter.startsWith("h"))
             {
-                v.setVoxelHeight((int) Double.parseDouble(parameter.replace("h", "")));
+                v.setVoxelHeight((int)Double.parseDouble(parameter.replace("h", "")));
                 v.sendMessage(ChatColor.AQUA + "Cylinder v.voxelHeight set to: " + v.getVoxelHeight());
             }
             else if (parameter.startsWith("c"))
             {
-                v.setcCen((int) Double.parseDouble(parameter.replace("c", "")));
+                v.setcCen((int)Double.parseDouble(parameter.replace("c", "")));
                 v.sendMessage(ChatColor.AQUA + "Cylinder origin set to: " + v.getcCen());
             }
             else

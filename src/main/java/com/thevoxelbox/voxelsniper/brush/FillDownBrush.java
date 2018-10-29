@@ -52,7 +52,10 @@ public class FillDownBrush extends PerformBrush
                                 break;
                             }
                         }
-                        if (!found) continue;
+                        if (!found)
+                        {
+                            continue;
+                        }
                         y--;
                     }
                     for (; y >= -targetBlock.getY(); --y)

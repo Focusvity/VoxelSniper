@@ -108,9 +108,9 @@ public class RangeBlockHelper
                     this.xOffset = (this.hLength * this.rotXCos);
                     this.zOffset = (this.hLength * this.rotXSin);
 
-                    this.targetX = (int) Math.floor(this.xOffset + this.playerX);
-                    this.targetY = (int) Math.floor(this.yOffset + this.playerY);
-                    this.targetZ = (int) Math.floor(this.zOffset + this.playerZ);
+                    this.targetX = (int)Math.floor(this.xOffset + this.playerX);
+                    this.targetY = (int)Math.floor(this.yOffset + this.playerY);
+                    this.targetZ = (int)Math.floor(this.zOffset + this.playerZ);
 
                 }
                 while ((this.length <= this.range) && ((this.targetX == this.lastX) && (this.targetY == this.lastY) && (this.targetZ == this.lastZ)));
@@ -133,9 +133,9 @@ public class RangeBlockHelper
                     this.xOffset = (this.hLength * this.rotXCos);
                     this.zOffset = (this.hLength * this.rotXSin);
 
-                    this.targetX = (int) Math.floor(this.xOffset + this.playerX);
-                    this.targetY = (int) Math.floor(this.yOffset + this.playerY);
-                    this.targetZ = (int) Math.floor(this.zOffset + this.playerZ);
+                    this.targetX = (int)Math.floor(this.xOffset + this.playerX);
+                    this.targetY = (int)Math.floor(this.yOffset + this.playerY);
+                    this.targetZ = (int)Math.floor(this.zOffset + this.playerZ);
 
                 }
                 while ((this.length <= this.range) && ((this.targetX == this.lastX) && (this.targetY == this.lastY) && (this.targetZ == this.lastZ)));
@@ -262,9 +262,9 @@ public class RangeBlockHelper
             this.xOffset = (this.hLength * this.rotXCos);
             this.zOffset = (this.hLength * this.rotXSin);
 
-            this.targetX = (int) Math.floor(this.xOffset + this.playerX);
-            this.targetY = (int) Math.floor(this.yOffset + this.playerY);
-            this.targetZ = (int) Math.floor(this.zOffset + this.playerZ);
+            this.targetX = (int)Math.floor(this.xOffset + this.playerX);
+            this.targetY = (int)Math.floor(this.yOffset + this.playerY);
+            this.targetZ = (int)Math.floor(this.zOffset + this.playerZ);
 
         }
         while ((this.length <= this.range) && ((this.targetX == this.lastX) && (this.targetY == this.lastY) && (this.targetZ == this.lastZ)));
@@ -343,9 +343,9 @@ public class RangeBlockHelper
             this.xOffset = (this.hLength * this.rotXCos);
             this.zOffset = (this.hLength * this.rotXSin);
 
-            this.targetX = (int) Math.floor(this.xOffset + this.playerX);
-            this.targetY = (int) Math.floor(this.yOffset + this.playerY);
-            this.targetZ = (int) Math.floor(this.zOffset + this.playerZ);
+            this.targetX = (int)Math.floor(this.xOffset + this.playerX);
+            this.targetY = (int)Math.floor(this.yOffset + this.playerY);
+            this.targetZ = (int)Math.floor(this.zOffset + this.playerZ);
 
         }
         while ((this.length <= this.range) && ((this.targetX == this.lastX) && (this.targetY == this.lastY) && (this.targetZ == this.lastZ)));
@@ -382,9 +382,9 @@ public class RangeBlockHelper
         this.rotXCos = Math.cos(Math.toRadians(this.rotX));
         this.rotXSin = Math.sin(Math.toRadians(this.rotX));
 
-        this.targetX = (int) Math.floor(this.playerLoc.getX());
-        this.targetY = (int) Math.floor(this.playerLoc.getY() + this.viewHeight);
-        this.targetZ = (int) Math.floor(this.playerLoc.getZ());
+        this.targetX = (int)Math.floor(this.playerLoc.getX());
+        this.targetY = (int)Math.floor(this.playerLoc.getY() + this.viewHeight);
+        this.targetZ = (int)Math.floor(this.playerLoc.getZ());
         this.lastX = this.targetX;
         this.lastY = this.targetY;
         this.lastZ = this.targetZ;

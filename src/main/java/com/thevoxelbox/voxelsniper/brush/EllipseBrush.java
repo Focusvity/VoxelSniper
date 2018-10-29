@@ -40,8 +40,8 @@ public class EllipseBrush extends PerformBrush
         {
             for (double steps = 0; (steps <= TWO_PI); steps += stepSize)
             {
-                final int x = (int) Math.round(this.xscl * Math.cos(steps));
-                final int y = (int) Math.round(this.yscl * Math.sin(steps));
+                final int x = (int)Math.round(this.xscl * Math.cos(steps));
+                final int y = (int)Math.round(this.yscl * Math.sin(steps));
 
                 switch (getTargetBlock().getFace(this.getLastBlock()))
                 {
@@ -89,8 +89,8 @@ public class EllipseBrush extends PerformBrush
                 {
                     for (double steps = 0; (steps <= TWO_PI); steps += stepSize)
                     {
-                        final int x = (int) Math.round(ix * Math.cos(steps));
-                        final int y = (int) Math.round(iy * Math.sin(steps));
+                        final int x = (int)Math.round(ix * Math.cos(steps));
+                        final int y = (int)Math.round(iy * Math.sin(steps));
 
                         switch (getTargetBlock().getFace(this.getLastBlock()))
                         {
@@ -123,8 +123,8 @@ public class EllipseBrush extends PerformBrush
                 {
                     for (double steps = 0; (steps <= TWO_PI); steps += stepSize)
                     {
-                        final int x = (int) Math.round(ix * Math.cos(steps));
-                        final int y = (int) Math.round(iy * Math.sin(steps));
+                        final int x = (int)Math.round(ix * Math.cos(steps));
+                        final int y = (int)Math.round(iy * Math.sin(steps));
 
                         switch (getTargetBlock().getFace(this.getLastBlock()))
                         {

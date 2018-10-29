@@ -68,7 +68,7 @@ public class VoxelBrushCommand extends VoxelCommand
                     if (currentBrush instanceof Performer)
                     {
                         String[] parameters = Arrays.copyOfRange(args, 1, args.length);
-                        ((Performer) currentBrush).parse(parameters, snipeData);
+                        ((Performer)currentBrush).parse(parameters, snipeData);
                         return true;
                     }
                     else
