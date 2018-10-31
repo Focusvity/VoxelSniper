@@ -39,7 +39,7 @@ public class StencilListBrush extends Brush
     private String readRandomStencil(final SnipeData v)
     {
         double rand = Math.random() * (this.stencilList.size());
-        final int choice = (int)rand;
+        final int choice = (int) rand;
         return this.stencilList.get(choice);
     }
 
@@ -118,7 +118,7 @@ public class StencilListBrush extends Brush
                             for (int j = 0; j < numLoops; j++)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                                 currX++;
                                 if (currX == this.x - this.xRef)
                                 {
@@ -135,7 +135,7 @@ public class StencilListBrush extends Brush
                         else
                         {
                             undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                            this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData((in.readByte() + 128), (byte)(in.readByte() + 128), false);
+                            this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData((in.readByte() + 128), (byte) (in.readByte() + 128), false);
                             currX++;
                             if (currX == this.x - this.xRef)
                             {
@@ -164,7 +164,7 @@ public class StencilListBrush extends Brush
                                 if (id != 0 && this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).getTypeId() == 0)
                                 {
                                     undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)(data), false);
+                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) (data), false);
                                 }
                                 currX++;
                                 if (currX == this.x - this.xRef)
@@ -186,7 +186,7 @@ public class StencilListBrush extends Brush
                             if (id != 0 && this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).getTypeId() == 0)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)(data), false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) (data), false);
                             }
                             currX++;
                             if (currX == this.x - this.xRef)
@@ -216,7 +216,7 @@ public class StencilListBrush extends Brush
                                 if (id != 0)
                                 {
                                     undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                                 }
                                 currX++;
                                 if (currX == this.x - this.xRef)
@@ -238,7 +238,7 @@ public class StencilListBrush extends Brush
                             if (id != 0)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                             }
                             currX++;
                             if (currX == this.x)
@@ -321,7 +321,7 @@ public class StencilListBrush extends Brush
                             for (int j = 0; j < numLoops; j++)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                                 currX--;
                                 if (currX == -this.x + this.xRef)
                                 {
@@ -338,7 +338,7 @@ public class StencilListBrush extends Brush
                         else
                         {
                             undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                            this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData((in.readByte() + 128), (byte)(in.readByte() + 128), false);
+                            this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData((in.readByte() + 128), (byte) (in.readByte() + 128), false);
                             currX--;
                             if (currX == -this.x + this.xRef)
                             {
@@ -367,7 +367,7 @@ public class StencilListBrush extends Brush
                                 if (id != 0 && this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).getTypeId() == 0)
                                 {
                                     undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)(data), false);
+                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) (data), false);
                                 }
                                 currX--;
                                 if (currX == -this.x + this.xRef)
@@ -389,7 +389,7 @@ public class StencilListBrush extends Brush
                             if (id != 0 && this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).getTypeId() == 0)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)(data), false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) (data), false);
                             }
                             currX--;
                             if (currX == -this.x + this.xRef)
@@ -419,7 +419,7 @@ public class StencilListBrush extends Brush
                                 if (id != 0)
                                 {
                                     undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                                 }
                                 currX--;
                                 if (currX == -this.x + this.xRef)
@@ -441,7 +441,7 @@ public class StencilListBrush extends Brush
                             if (id != 0)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                             }
                             currX--;
                             if (currX == -this.x + this.xRef)
@@ -524,7 +524,7 @@ public class StencilListBrush extends Brush
                             for (int j = 0; j < numLoops; j++)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                                 currZ++;
                                 if (currZ == this.x - this.xRef)
                                 {
@@ -541,7 +541,7 @@ public class StencilListBrush extends Brush
                         else
                         {
                             undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                            this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData((in.readByte() + 128), (byte)(in.readByte() + 128), false);
+                            this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData((in.readByte() + 128), (byte) (in.readByte() + 128), false);
                             currZ++;
                             currZ++;
                             if (currZ == this.x - this.xRef)
@@ -575,7 +575,7 @@ public class StencilListBrush extends Brush
                                     // having to even check the
                                     // block.
                                     undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)(data), false);
+                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) (data), false);
                                 }
                                 currZ++;
                                 if (currZ == this.x - this.xRef)
@@ -600,7 +600,7 @@ public class StencilListBrush extends Brush
                                 // the time from having to even
                                 // check the block.
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)(data), false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) (data), false);
                             }
                             currZ++;
                             if (currZ == this.x - this.xRef)
@@ -630,7 +630,7 @@ public class StencilListBrush extends Brush
                                 if (id != 0)
                                 {
                                     undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                                 }
                                 currZ++;
                                 if (currZ == this.x - this.xRef)
@@ -652,7 +652,7 @@ public class StencilListBrush extends Brush
                             if (id != 0)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                             }
                             currZ++;
                             if (currZ == this.x - this.xRef)
@@ -735,7 +735,7 @@ public class StencilListBrush extends Brush
                             for (int j = 0; j < numLoops; j++)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                                 currZ--;
                                 if (currZ == -this.x + this.xRef)
                                 {
@@ -752,7 +752,7 @@ public class StencilListBrush extends Brush
                         else
                         {
                             undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                            this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData((in.readByte() + 128), (byte)(in.readByte() + 128), false);
+                            this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData((in.readByte() + 128), (byte) (in.readByte() + 128), false);
                             currZ--;
                             if (currZ == -this.x + this.xRef)
                             {
@@ -781,7 +781,7 @@ public class StencilListBrush extends Brush
                                 if (id != 0 && this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).getTypeId() == 0)
                                 {
                                     undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)(data), false);
+                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) (data), false);
                                 }
                                 currZ--;
                                 if (currZ == -this.x + this.xRef)
@@ -803,7 +803,7 @@ public class StencilListBrush extends Brush
                             if (id != 0 && this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).getTypeId() == 0)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)(data), false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) (data), false);
                             }
                             currZ--;
                             if (currZ == -this.x + this.xRef)
@@ -833,7 +833,7 @@ public class StencilListBrush extends Brush
                                 if (id != 0)
                                 {
                                     undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                    this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                                 }
                                 currZ--;
                                 if (currZ == -this.x + this.xRef)
@@ -855,7 +855,7 @@ public class StencilListBrush extends Brush
                             if (id != 0)
                             {
                                 undo.put(this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ));
-                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte)data, false);
+                                this.clampY(this.getTargetBlock().getX() + currX, this.getTargetBlock().getY() + currY, this.getTargetBlock().getZ() + currZ).setTypeIdAndData(id, (byte) data, false);
                             }
                             currZ--;
                             if (currZ == -this.x + this.xRef)

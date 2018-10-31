@@ -1,18 +1,14 @@
 package com.thevoxelbox.voxelsniper;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Method;
-import java.net.URL;
-import java.net.URLConnection;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-class VoxelSniperUpdater
+import java.io.*;
+import java.lang.reflect.Method;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class VoxelSniperUpdater
 {
     private Plugin plugin;
     private VoxelSniper.BuildProperties build = VoxelSniper.build;
@@ -24,7 +20,7 @@ class VoxelSniperUpdater
         this.plugin = plugin;
     }
 
-    void update()
+    public void update()
     {
         try
         {
@@ -64,7 +60,9 @@ class VoxelSniperUpdater
                 out.close();
                 in.close();
                 VoxelSniper.getInstance().getLogger().info("Update to VoxelSniper applied successfully");
-            } else {
+            }
+            else
+            {
                 VoxelSniper.getInstance().getLogger().info("No updates are available for VoxelSniper");
             }
         }
@@ -83,7 +81,7 @@ class VoxelSniperUpdater
                 Method method = JavaPlugin.class.getDeclaredMethod("getFile");
                 boolean wasAccessible = method.isAccessible();
                 method.setAccessible(true);
-                File file = (File)method.invoke(plugin);
+                File file = (File) method.invoke(plugin);
                 method.setAccessible(wasAccessible);
 
                 return file.getPath();

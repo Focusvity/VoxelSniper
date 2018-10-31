@@ -39,7 +39,7 @@ public class UndoDelegate implements BlockChangeDelegate
     public boolean setRawTypeIdAndData(int x, int y, int z, int typeId, int data)
     {
         this.currentUndo.put(targetWorld.getBlockAt(x, y, z));
-        return this.targetWorld.getBlockAt(x, y, z).setTypeIdAndData(typeId, (byte)data, false);
+        return this.targetWorld.getBlockAt(x, y, z).setTypeIdAndData(typeId, (byte) data, false);
     }
 
     @SuppressWarnings("deprecation")
@@ -55,7 +55,7 @@ public class UndoDelegate implements BlockChangeDelegate
     public boolean setTypeIdAndData(int x, int y, int z, int typeId, int data)
     {
         this.currentUndo.put(targetWorld.getBlockAt(x, y, z));
-        return this.targetWorld.getBlockAt(x, y, z).setTypeIdAndData(typeId, (byte)data, true);
+        return this.targetWorld.getBlockAt(x, y, z).setTypeIdAndData(typeId, (byte) data, true);
     }
 
     @SuppressWarnings("deprecation")

@@ -1,4 +1,4 @@
-VoxelSniper
+VoxelSniper [![Build Status](https://travis-ci.org/Focusvity/VoxelSniper.svg?branch=spigot-1.12.2)](https://travis-ci.org/Focusvity/VoxelSniper)
 ===========
 
 The premiere long-distance brush editor for [Bukkit][Bukkit].

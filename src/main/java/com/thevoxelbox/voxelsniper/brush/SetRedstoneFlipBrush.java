@@ -66,12 +66,12 @@ public class SetRedstoneFlipBrush extends Brush
                 if ((bl.getData() % 4) == 1)
                 {
                     this.undo.put(bl);
-                    bl.setData((byte)(bl.getData() + 2));
+                    bl.setData((byte) (bl.getData() + 2));
                 }
                 else if ((bl.getData() % 4) == 3)
                 {
                     this.undo.put(bl);
-                    bl.setData((byte)(bl.getData() - 2));
+                    bl.setData((byte) (bl.getData() - 2));
                 }
             }
             else
@@ -79,12 +79,12 @@ public class SetRedstoneFlipBrush extends Brush
                 if ((bl.getData() % 4) == 2)
                 {
                     this.undo.put(bl);
-                    bl.setData((byte)(bl.getData() - 2));
+                    bl.setData((byte) (bl.getData() - 2));
                 }
                 else if ((bl.getData() % 4) == 0)
                 {
                     this.undo.put(bl);
-                    bl.setData((byte)(bl.getData() + 2));
+                    bl.setData((byte) (bl.getData() + 2));
                 }
             }
         }

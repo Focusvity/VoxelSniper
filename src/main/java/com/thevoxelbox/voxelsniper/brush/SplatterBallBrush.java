@@ -233,7 +233,7 @@ public class SplatterBallBrush extends PerformBrush
                 if (temp >= SEED_PERCENT_MIN && temp <= SEED_PERCENT_MAX)
                 {
                     v.sendMessage(ChatColor.AQUA + "Seed percent set to: " + temp / 100 + "%");
-                    this.seedPercent = (int)temp;
+                    this.seedPercent = (int) temp;
                 }
                 else
                 {
@@ -247,7 +247,7 @@ public class SplatterBallBrush extends PerformBrush
                 if (temp >= GROW_PERCENT_MIN && temp <= GROW_PERCENT_MAX)
                 {
                     v.sendMessage(ChatColor.AQUA + "Growth percent set to: " + temp / 100 + "%");
-                    this.growPercent = (int)temp;
+                    this.growPercent = (int) temp;
                 }
                 else
                 {

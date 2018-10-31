@@ -57,7 +57,7 @@ public abstract class Brush implements IBrush
         {
             if (this instanceof PerformBrush)
             {
-                ((PerformBrush)this).initP(v);
+                ((PerformBrush) this).initP(v);
             }
             return true;
         }
@@ -140,7 +140,7 @@ public abstract class Brush implements IBrush
             RangeBlockHelper rangeBlockHelper;
             if (v.owner().getSnipeData(v.owner().getCurrentToolId()).isRanged())
             {
-                rangeBlockHelper = new RangeBlockHelper(v.owner().getPlayer(), v.owner().getPlayer().getWorld(), (double)v.owner().getSnipeData(v.owner().getCurrentToolId()).getRange());
+                rangeBlockHelper = new RangeBlockHelper(v.owner().getPlayer(), v.owner().getPlayer().getWorld(), (double) v.owner().getSnipeData(v.owner().getCurrentToolId()).getRange());
                 this.setTargetBlock(rangeBlockHelper.getRangeBlock());
             }
             else

@@ -170,7 +170,7 @@ public class Rot3DBrush extends Brush
                         final double newyzY = (newxyY * cosRoll) - (newxzZ * sinRoll);
                         final double newyzZ = (newxyY * sinRoll) + (newxzZ * cosRoll);
 
-                        doNotFill[(int)newxyX + this.bSize][(int)newyzY + this.bSize][(int)newyzZ + this.bSize] = true; // only rounds off to nearest
+                        doNotFill[(int) newxyX + this.bSize][(int) newyzY + this.bSize][(int) newyzZ + this.bSize] = true; // only rounds off to nearest
                         // block
                         // after all three, though.
 
@@ -179,7 +179,7 @@ public class Rot3DBrush extends Brush
                         {
                             continue;
                         }
-                        this.setBlockIdAndDataAt(this.getTargetBlock().getX() + (int)newxyX, this.getTargetBlock().getY() + (int)newyzY, this.getTargetBlock().getZ() + (int)newyzZ, block.getId(), block.getData());
+                        this.setBlockIdAndDataAt(this.getTargetBlock().getX() + (int) newxyX, this.getTargetBlock().getY() + (int) newyzY, this.getTargetBlock().getZ() + (int) newyzZ, block.getId(), block.getData());
                     }
                 }
             }

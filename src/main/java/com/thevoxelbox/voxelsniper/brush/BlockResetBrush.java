@@ -58,7 +58,7 @@ public class BlockResetBrush extends Brush
                     }
 
                     final byte oldData = block.getData();
-                    block.setTypeIdAndData(block.getTypeId(), (byte)((block.getData() + 1) & 0xf), true);
+                    block.setTypeIdAndData(block.getTypeId(), (byte) ((block.getData() + 1) & 0xf), true);
                     block.setTypeIdAndData(block.getTypeId(), oldData, true);
                 }
             }

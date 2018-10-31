@@ -32,7 +32,7 @@ public class VoxelPerformerCommand extends VoxelCommand
                 IBrush brush = sniper.getBrush(sniper.getCurrentToolId());
                 if (brush instanceof Performer)
                 {
-                    ((Performer)brush).parse(new String[]{"m"}, snipeData);
+                    ((Performer) brush).parse(new String[]{"m"}, snipeData);
                 }
                 else
                 {
@@ -44,7 +44,7 @@ public class VoxelPerformerCommand extends VoxelCommand
                 IBrush brush = sniper.getBrush(sniper.getCurrentToolId());
                 if (brush instanceof Performer)
                 {
-                    ((Performer)brush).parse(args, snipeData);
+                    ((Performer) brush).parse(args, snipeData);
                 }
                 else
                 {

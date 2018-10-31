@@ -32,8 +32,8 @@ public final class PaintingWrapper
     @SuppressWarnings("deprecation")
     public static void paint(final Player p, final boolean auto, final boolean back, final int choice)
     {
-        Location targetLocation = p.getTargetBlock((Set<Material>)null, 4).getLocation();
-        Chunk paintingChunk = p.getTargetBlock((Set<Material>)null, 4).getLocation().getChunk();
+        Location targetLocation = p.getTargetBlock((Set<Material>) null, 4).getLocation();
+        Chunk paintingChunk = p.getTargetBlock((Set<Material>) null, 4).getLocation().getChunk();
 
         Double bestDistanceMatch = 50D;
         Painting bestMatch = null;
@@ -47,7 +47,7 @@ public final class PaintingWrapper
                 if (distance <= 4 && distance < bestDistanceMatch)
                 {
                     bestDistanceMatch = distance;
-                    bestMatch = (Painting)entity;
+                    bestMatch = (Painting) entity;
                 }
             }
         }

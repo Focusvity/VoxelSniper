@@ -138,7 +138,7 @@ public class BlockResetSurfaceBrush extends Brush
     @SuppressWarnings("deprecation")
     private void resetBlock(Block block, final byte oldData)
     {
-        block.setTypeIdAndData(block.getTypeId(), (byte)((block.getData() + 1) & 0xf), true);
+        block.setTypeIdAndData(block.getTypeId(), (byte) ((block.getData() + 1) & 0xf), true);
         block.setTypeIdAndData(block.getTypeId(), oldData, true);
     }
 

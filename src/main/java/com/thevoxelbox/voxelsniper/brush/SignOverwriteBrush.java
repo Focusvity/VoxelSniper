@@ -66,7 +66,7 @@ public class SignOverwriteBrush extends Brush
     {
         if (this.getTargetBlock().getState() instanceof Sign)
         {
-            setSignText((Sign)this.getTargetBlock().getState());
+            setSignText((Sign) this.getTargetBlock().getState());
         }
         else
         {
@@ -100,7 +100,7 @@ public class SignOverwriteBrush extends Brush
                     BlockState blockState = this.getWorld().getBlockAt(x, y, z).getState();
                     if (blockState instanceof Sign)
                     {
-                        setSignText((Sign)blockState);
+                        setSignText((Sign) blockState);
                         signFound = true;
                     }
                 }
@@ -131,7 +131,7 @@ public class SignOverwriteBrush extends Brush
     {
         if (this.getTargetBlock().getState() instanceof Sign)
         {
-            Sign sign = (Sign)this.getTargetBlock().getState();
+            Sign sign = (Sign) this.getTargetBlock().getState();
 
             for (int i = 0; i < this.signTextLines.length; i++)
             {

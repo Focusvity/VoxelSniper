@@ -1,25 +1,26 @@
 package com.thevoxelbox.voxelsniper;
 
 import com.thevoxelbox.voxelsniper.brush.*;
-import java.io.InputStream;
-import java.util.Properties;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.InputStream;
+import java.util.Properties;
+
 /**
  * Bukkit extension point.
  */
 public class VoxelSniper extends JavaPlugin
 {
+    public static final BuildProperties build = new BuildProperties();
     private static VoxelSniper instance;
     private final VoxelSniperListener voxelSniperListener = new VoxelSniperListener(this);
     private SniperManager sniperManager = new SniperManager(this);
     private VoxelSniperConfiguration voxelSniperConfiguration;
     private Brushes brushManager = new Brushes();
-    public static final BuildProperties build = new BuildProperties();
 
     /**
      * @return {@link VoxelSniper}
@@ -71,7 +72,7 @@ public class VoxelSniper extends JavaPlugin
                 arguments = new String[0];
             }
 
-            return voxelSniperListener.onCommand((Player)sender, arguments, command.getName());
+            return voxelSniperListener.onCommand((Player) sender, arguments, command.getName());
         }
 
         getLogger().info("Only Players can execute commands.");
@@ -183,7 +184,9 @@ public class VoxelSniper extends JavaPlugin
         brushManager.registerSniperBrush(VoxelDiscFaceBrush.class, "vdf", "voxeldiscface");
         brushManager.registerSniperBrush(WarpBrush.class, "w", "warp");
     }
-    public static class BuildProperties {
+
+    public static class BuildProperties
+    {
 
         public String head;
 
