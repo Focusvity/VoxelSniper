@@ -162,7 +162,7 @@ public class Sniper
                                 else
                                 {
                                     byte originalData = snipeData.getData();
-                                    snipeData.setData((byte) 0);
+                                    snipeData.setData((byte)0);
                                     SniperMaterialChangedEvent event = new SniperMaterialChangedEvent(this, toolId, new MaterialData(snipeData.getVoxelId(), originalData), new MaterialData(snipeData.getVoxelId(), snipeData.getData()));
                                     Bukkit.getPluginManager().callEvent(event);
                                     snipeData.getVoxelMessage().data();
@@ -218,7 +218,7 @@ public class Sniper
                                 else
                                 {
                                     byte originalData = snipeData.getReplaceData();
-                                    snipeData.setReplaceData((byte) 0);
+                                    snipeData.setReplaceData((byte)0);
                                     SniperReplaceMaterialChangedEvent event = new SniperReplaceMaterialChangedEvent(this, toolId, new MaterialData(snipeData.getReplaceId(), originalData), new MaterialData(snipeData.getReplaceId(), snipeData.getReplaceData()));
                                     Bukkit.getPluginManager().callEvent(event);
                                     snipeData.getVoxelMessage().replaceData();
@@ -272,7 +272,7 @@ public class Sniper
 
                 if (sniperTool.getCurrentBrush() instanceof PerformBrush)
                 {
-                    PerformBrush performerBrush = (PerformBrush) sniperTool.getCurrentBrush();
+                    PerformBrush performerBrush = (PerformBrush)sniperTool.getCurrentBrush();
                     performerBrush.initP(snipeData);
                 }
 
@@ -438,7 +438,7 @@ public class Sniper
         brush.info(sniperTool.getMessageHelper());
         if (brush instanceof Performer)
         {
-            ((Performer) brush).showInfo(sniperTool.getMessageHelper());
+            ((Performer)brush).showInfo(sniperTool.getMessageHelper());
         }
     }
 

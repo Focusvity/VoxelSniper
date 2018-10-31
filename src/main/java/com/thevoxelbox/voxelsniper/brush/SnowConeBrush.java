@@ -69,7 +69,7 @@ public class SnowConeBrush extends Brush
             {
                 final double zSquared = Math.pow(z - brushSize, 2);
                 final double dist = Math.pow(xSquared + zSquared, .5); // distance from center of array
-                final int snowData = brushSize - (int) Math.ceil(dist);
+                final int snowData = brushSize - (int)Math.ceil(dist);
 
                 if (snowData >= 0)
                 { // no funny business
@@ -133,7 +133,7 @@ public class SnowConeBrush extends Brush
                     undo.put(this.clampY(blockPositionX - brushSize + x, blockPositionY - yOffset[x][z], blockPositionZ - brushSize + z));
                 }
                 this.setBlockIdAt(blockPositionZ - brushSize + z, blockPositionX - brushSize + x, blockPositionY - yOffset[x][z], snowcone[x][z]);
-                this.clampY(blockPositionX - brushSize + x, blockPositionY - yOffset[x][z], blockPositionZ - brushSize + z).setData((byte) snowconeData[x][z]);
+                this.clampY(blockPositionX - brushSize + x, blockPositionY - yOffset[x][z], blockPositionZ - brushSize + z).setData((byte)snowconeData[x][z]);
 
             }
         }

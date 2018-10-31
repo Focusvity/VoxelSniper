@@ -148,42 +148,42 @@ public class Undo
         BlockState currentState = blockState.getBlock().getState();
         if (blockState instanceof BrewingStand && currentState instanceof BrewingStand)
         {
-            ((BrewingStand) currentState).getInventory().setContents(((BrewingStand) blockState).getInventory().getContents());
+            ((BrewingStand)currentState).getInventory().setContents(((BrewingStand)blockState).getInventory().getContents());
         }
         else if (blockState instanceof Chest && currentState instanceof Chest)
         {
-            ((Chest) currentState).getInventory().setContents(((Chest) blockState).getInventory().getContents());
-            ((Chest) currentState).getBlockInventory().setContents(((Chest) blockState).getBlockInventory().getContents());
+            ((Chest)currentState).getInventory().setContents(((Chest)blockState).getInventory().getContents());
+            ((Chest)currentState).getBlockInventory().setContents(((Chest)blockState).getBlockInventory().getContents());
             currentState.update();
         }
         else if (blockState instanceof CreatureSpawner && currentState instanceof CreatureSpawner)
         {
-            ((CreatureSpawner) currentState).setSpawnedType(((CreatureSpawner) currentState).getSpawnedType());
+            ((CreatureSpawner)currentState).setSpawnedType(((CreatureSpawner)currentState).getSpawnedType());
             currentState.update();
         }
         else if (blockState instanceof Dispenser && currentState instanceof Dispenser)
         {
-            ((Dispenser) currentState).getInventory().setContents(((Dispenser) blockState).getInventory().getContents());
+            ((Dispenser)currentState).getInventory().setContents(((Dispenser)blockState).getInventory().getContents());
             currentState.update();
         }
         else if (blockState instanceof Furnace && currentState instanceof Furnace)
         {
-            ((Furnace) currentState).getInventory().setContents(((Furnace) blockState).getInventory().getContents());
-            ((Furnace) currentState).setBurnTime(((Furnace) blockState).getBurnTime());
-            ((Furnace) currentState).setCookTime(((Furnace) blockState).getCookTime());
+            ((Furnace)currentState).getInventory().setContents(((Furnace)blockState).getInventory().getContents());
+            ((Furnace)currentState).setBurnTime(((Furnace)blockState).getBurnTime());
+            ((Furnace)currentState).setCookTime(((Furnace)blockState).getCookTime());
             currentState.update();
         }
         else if (blockState instanceof NoteBlock && currentState instanceof NoteBlock)
         {
-            ((NoteBlock) currentState).setNote(((NoteBlock) blockState).getNote());
+            ((NoteBlock)currentState).setNote(((NoteBlock)blockState).getNote());
             currentState.update();
         }
         else if (blockState instanceof Sign && currentState instanceof Sign)
         {
             int i = 0;
-            for (String text : ((Sign) blockState).getLines())
+            for (String text : ((Sign)blockState).getLines())
             {
-                ((Sign) currentState).setLine(i++, text);
+                ((Sign)currentState).setLine(i++, text);
             }
             currentState.update();
         }

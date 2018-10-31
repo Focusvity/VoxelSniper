@@ -49,14 +49,14 @@ public class EllipsoidBrush extends PerformBrush
 
                     if (xSquared + ySquared + zSquared <= 1)
                     {
-                        this.current.perform(this.clampY((int) (blockPositionX + x), (int) (blockPositionY + y), (int) (blockPositionZ + z)));
-                        this.current.perform(this.clampY((int) (blockPositionX + x), (int) (blockPositionY + y), (int) (blockPositionZ - z)));
-                        this.current.perform(this.clampY((int) (blockPositionX + x), (int) (blockPositionY - y), (int) (blockPositionZ + z)));
-                        this.current.perform(this.clampY((int) (blockPositionX + x), (int) (blockPositionY - y), (int) (blockPositionZ - z)));
-                        this.current.perform(this.clampY((int) (blockPositionX - x), (int) (blockPositionY + y), (int) (blockPositionZ + z)));
-                        this.current.perform(this.clampY((int) (blockPositionX - x), (int) (blockPositionY + y), (int) (blockPositionZ - z)));
-                        this.current.perform(this.clampY((int) (blockPositionX - x), (int) (blockPositionY - y), (int) (blockPositionZ + z)));
-                        this.current.perform(this.clampY((int) (blockPositionX - x), (int) (blockPositionY - y), (int) (blockPositionZ - z)));
+                        this.current.perform(this.clampY((int)(blockPositionX + x), (int)(blockPositionY + y), (int)(blockPositionZ + z)));
+                        this.current.perform(this.clampY((int)(blockPositionX + x), (int)(blockPositionY + y), (int)(blockPositionZ - z)));
+                        this.current.perform(this.clampY((int)(blockPositionX + x), (int)(blockPositionY - y), (int)(blockPositionZ + z)));
+                        this.current.perform(this.clampY((int)(blockPositionX + x), (int)(blockPositionY - y), (int)(blockPositionZ - z)));
+                        this.current.perform(this.clampY((int)(blockPositionX - x), (int)(blockPositionY + y), (int)(blockPositionZ + z)));
+                        this.current.perform(this.clampY((int)(blockPositionX - x), (int)(blockPositionY + y), (int)(blockPositionZ - z)));
+                        this.current.perform(this.clampY((int)(blockPositionX - x), (int)(blockPositionY - y), (int)(blockPositionZ + z)));
+                        this.current.perform(this.clampY((int)(blockPositionX - x), (int)(blockPositionY - y), (int)(blockPositionZ - z)));
                     }
 
                 }

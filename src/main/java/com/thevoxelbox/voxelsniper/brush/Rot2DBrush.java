@@ -84,7 +84,7 @@ public class Rot2DBrush extends Brush
                     final double newX = (xx * cos) - (zz * sin);
                     final double newZ = (xx * sin) + (zz * cos);
 
-                    doNotFill[(int) newX + this.bSize][(int) newZ + this.bSize] = true;
+                    doNotFill[(int)newX + this.bSize][(int)newZ + this.bSize] = true;
 
                     for (int currentY = 0; currentY < this.snap.length; currentY++)
                     {
@@ -95,7 +95,7 @@ public class Rot2DBrush extends Brush
                         {
                             continue;
                         }
-                        this.setBlockIdAndDataAt(this.getTargetBlock().getX() + (int) newX, this.getTargetBlock().getY() + yy, this.getTargetBlock().getZ() + (int) newZ, block.getId(), block.getData());
+                        this.setBlockIdAndDataAt(this.getTargetBlock().getX() + (int)newX, this.getTargetBlock().getY() + yy, this.getTargetBlock().getZ() + (int)newZ, block.getId(), block.getData());
                     }
                 }
             }

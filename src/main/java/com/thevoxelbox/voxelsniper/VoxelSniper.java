@@ -1,6 +1,8 @@
 package com.thevoxelbox.voxelsniper;
 
 import com.thevoxelbox.voxelsniper.brush.*;
+import java.io.InputStream;
+import java.util.Properties;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -17,6 +19,7 @@ public class VoxelSniper extends JavaPlugin
     private SniperManager sniperManager = new SniperManager(this);
     private VoxelSniperConfiguration voxelSniperConfiguration;
     private Brushes brushManager = new Brushes();
+    public static final BuildProperties build = new BuildProperties();
 
     /**
      * @return {@link VoxelSniper}
@@ -68,7 +71,7 @@ public class VoxelSniper extends JavaPlugin
                 arguments = new String[0];
             }
 
-            return voxelSniperListener.onCommand((Player) sender, arguments, command.getName());
+            return voxelSniperListener.onCommand((Player)sender, arguments, command.getName());
         }
 
         getLogger().info("Only Players can execute commands.");
@@ -80,6 +83,7 @@ public class VoxelSniper extends JavaPlugin
     {
         VoxelSniper.instance = this;
 
+        build.load(VoxelSniper.getInstance());
         registerBrushes();
         getLogger().info("Registered " + brushManager.registeredSniperBrushes() + " Sniper Brushes with " + brushManager.registeredSniperBrushHandles() + " handles.");
 
@@ -88,6 +92,13 @@ public class VoxelSniper extends JavaPlugin
 
         Bukkit.getPluginManager().registerEvents(this.voxelSniperListener, this);
         getLogger().info("Registered Sniper Listener.");
+    }
+
+    @Override
+    public void onDisable()
+    {
+        VoxelSniperUpdater updater = new VoxelSniperUpdater(VoxelSniper.getInstance());
+        updater.update();
     }
 
     /**
@@ -171,5 +182,29 @@ public class VoxelSniper extends JavaPlugin
         brushManager.registerSniperBrush(VoxelDiscBrush.class, "vd", "voxeldisc");
         brushManager.registerSniperBrush(VoxelDiscFaceBrush.class, "vdf", "voxeldiscface");
         brushManager.registerSniperBrush(WarpBrush.class, "w", "warp");
+    }
+    public static class BuildProperties {
+
+        public String head;
+
+        public void load(VoxelSniper plugin)
+        {
+            try
+            {
+                final Properties gitprops;
+                try (InputStream in = plugin.getResource("git.properties"))
+                {
+                    gitprops = new Properties();
+                    gitprops.load(in);
+                }
+
+                head = gitprops.getProperty("git.commit.id.abbrev", "unknown");
+            }
+            catch (Exception ex)
+            {
+                VoxelSniper.getInstance().getLogger().severe("Could not load build properties! Did you compile with Netbeans/Maven?");
+                VoxelSniper.getInstance().getLogger().severe(ex.toString());
+            }
+        }
     }
 }

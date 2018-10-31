@@ -20,7 +20,7 @@ public class CoreProtectManager
 
             if (plugin != null && plugin instanceof CoreProtect)
             {
-                cp = (CoreProtect) plugin;
+                cp = (CoreProtect)plugin;
             }
         }
         catch (Exception ex)

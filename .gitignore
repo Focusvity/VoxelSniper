@@ -3,6 +3,9 @@
 .project
 .settings/
 
+# VoxelSniper Excludes
+git.properties
+
 # netbeans
 nbproject
 

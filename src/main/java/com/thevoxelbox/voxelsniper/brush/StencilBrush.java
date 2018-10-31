@@ -95,7 +95,7 @@ public class StencilBrush extends Brush
                             for (int j = 0; j < numLoops; j++)
                             {
                                 undo.put(this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ));
-                                this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte) data, false);
+                                this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte)data, false);
                                 currX++;
                                 if (currX == this.x - this.xRef)
                                 {
@@ -112,7 +112,7 @@ public class StencilBrush extends Brush
                         else
                         {
                             undo.put(this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ));
-                            this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData((in.readByte() + 128), (byte) (in.readByte() + 128), false);
+                            this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData((in.readByte() + 128), (byte)(in.readByte() + 128), false);
                             currX++;
                             if (currX == this.x - this.xRef)
                             {
@@ -141,7 +141,7 @@ public class StencilBrush extends Brush
                                 if (id != 0 && this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).getTypeId() == 0)
                                 {
                                     undo.put(this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ));
-                                    this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte) (data), false);
+                                    this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte)(data), false);
                                 }
                                 currX++;
                                 if (currX == this.x - this.xRef)
@@ -164,7 +164,7 @@ public class StencilBrush extends Brush
                             {
                                 undo.put(this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ));
                                 // v.sendMessage("currX:" + currX + " currZ:"+currZ + " currY:" + currY + " id:" + id + " data:" + (byte)data);
-                                this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte) (data), false);
+                                this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte)(data), false);
                             }
                             currX++;
                             if (currX == this.x - this.xRef)
@@ -194,7 +194,7 @@ public class StencilBrush extends Brush
                                 if (id != 0)
                                 {
                                     undo.put(this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ));
-                                    this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte) data, false);
+                                    this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte)data, false);
                                 }
                                 currX++;
                                 if (currX == this.x - this.xRef)
@@ -216,7 +216,7 @@ public class StencilBrush extends Brush
                             if (id != 0)
                             {
                                 undo.put(this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ));
-                                this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte) data, false);
+                                this.clampY(blockPositionX + currX, blockPositionY + currY, blockPositionZ + currZ).setTypeIdAndData(id, (byte)data, false);
                             }
                             currX++;
                             if (currX == this.x)
@@ -255,12 +255,12 @@ public class StencilBrush extends Brush
         final File file = new File("plugins/VoxelSniper/stencils/" + this.filename + ".vstencil");
         try
         {
-            this.x = (short) (Math.abs((this.firstPoint[0] - this.secondPoint[0])) + 1);
-            this.z = (short) (Math.abs((this.firstPoint[1] - this.secondPoint[1])) + 1);
-            this.y = (short) (Math.abs((this.firstPoint[2] - this.secondPoint[2])) + 1);
-            this.xRef = (short) ((this.firstPoint[0] > this.secondPoint[0]) ? (this.pastePoint[0] - this.secondPoint[0]) : (this.pastePoint[0] - this.firstPoint[0]));
-            this.zRef = (short) ((this.firstPoint[1] > this.secondPoint[1]) ? (this.pastePoint[1] - this.secondPoint[1]) : (this.pastePoint[1] - this.firstPoint[1]));
-            this.yRef = (short) ((this.firstPoint[2] > this.secondPoint[2]) ? (this.pastePoint[2] - this.secondPoint[2]) : (this.pastePoint[2] - this.firstPoint[2]));
+            this.x = (short)(Math.abs((this.firstPoint[0] - this.secondPoint[0])) + 1);
+            this.z = (short)(Math.abs((this.firstPoint[1] - this.secondPoint[1])) + 1);
+            this.y = (short)(Math.abs((this.firstPoint[2] - this.secondPoint[2])) + 1);
+            this.xRef = (short)((this.firstPoint[0] > this.secondPoint[0]) ? (this.pastePoint[0] - this.secondPoint[0]) : (this.pastePoint[0] - this.firstPoint[0]));
+            this.zRef = (short)((this.firstPoint[1] > this.secondPoint[1]) ? (this.pastePoint[1] - this.secondPoint[1]) : (this.pastePoint[1] - this.firstPoint[1]));
+            this.yRef = (short)((this.firstPoint[2] > this.secondPoint[2]) ? (this.pastePoint[2] - this.secondPoint[2]) : (this.pastePoint[2] - this.firstPoint[2]));
 
             if ((this.x * this.y * this.z) > 50000)
             {
@@ -287,8 +287,8 @@ public class StencilBrush extends Brush
             byte[] dataArray = new byte[this.x * this.z * this.y];
             byte[] runSizeArray = new byte[this.x * this.z * this.y];
 
-            byte lastId = (byte) (this.getWorld().getBlockTypeIdAt(blockPositionX, blockPositionY, blockPositionZ) - 128);
-            byte lastData = (byte) (this.clampY(blockPositionX, blockPositionY, blockPositionZ).getData() - 128);
+            byte lastId = (byte)(this.getWorld().getBlockTypeIdAt(blockPositionX, blockPositionY, blockPositionZ) - 128);
+            byte lastData = (byte)(this.clampY(blockPositionX, blockPositionY, blockPositionZ).getData() - 128);
             byte thisId;
             byte thisData;
             int counter = 0;
@@ -300,13 +300,13 @@ public class StencilBrush extends Brush
                     for (int x = 0; x < this.x; x++)
                     {
                         Block currentBlock = getWorld().getBlockAt(blockPositionX + x, blockPositionY + y, blockPositionZ + z);
-                        thisId = (byte) (currentBlock.getTypeId() - 128);
-                        thisData = (byte) (currentBlock.getData() - 128);
+                        thisId = (byte)(currentBlock.getTypeId() - 128);
+                        thisData = (byte)(currentBlock.getData() - 128);
                         if (thisId != lastId || thisData != lastData || counter == 255)
                         {
                             blockArray[arrayIndex] = lastId;
                             dataArray[arrayIndex] = lastData;
-                            runSizeArray[arrayIndex] = (byte) (counter - 128);
+                            runSizeArray[arrayIndex] = (byte)(counter - 128);
                             arrayIndex++;
                             counter = 1;
                             lastId = thisId;
@@ -323,7 +323,7 @@ public class StencilBrush extends Brush
             }
             blockArray[arrayIndex] = lastId; // saving last run, which will always be left over.
             dataArray[arrayIndex] = lastData;
-            runSizeArray[arrayIndex] = (byte) (counter - 128);
+            runSizeArray[arrayIndex] = (byte)(counter - 128);
 
             out.writeInt(arrayIndex + 1);
             // v.sendMessage("number of runs = " + arrayIndex);

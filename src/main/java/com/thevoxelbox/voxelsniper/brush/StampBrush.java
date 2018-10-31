@@ -20,6 +20,7 @@ public class StampBrush extends Brush
     protected Undo undo;
     protected boolean sorted = false;
     protected StampType stamp = StampType.DEFAULT;
+
     /**
      *
      */

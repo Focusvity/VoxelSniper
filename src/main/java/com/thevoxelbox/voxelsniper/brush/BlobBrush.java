@@ -289,7 +289,7 @@ public class BlobBrush extends PerformBrush
                 final int temp = Integer.parseInt(parameter.replace("g", ""));
                 if (temp >= GROW_PERCENT_MIN && temp <= GROW_PERCENT_MAX)
                 {
-                    v.sendMessage(ChatColor.AQUA + "Growth percent set to: " + (float) temp / 100 + "%");
+                    v.sendMessage(ChatColor.AQUA + "Growth percent set to: " + (float)temp / 100 + "%");
                     this.growPercent = temp;
                 }
                 else

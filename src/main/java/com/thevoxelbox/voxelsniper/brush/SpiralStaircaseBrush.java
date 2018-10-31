@@ -359,7 +359,7 @@ public class SpiralStaircaseBrush extends Brush
                                     undo.put(this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z));
                                 }
                                 this.setBlockIdAt(blockPositionZ - v.getBrushSize() + z, blockPositionX - v.getBrushSize() + x, blockPositionY + i, 53);
-                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z).setData((byte) 0);
+                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z).setData((byte)0);
                             }
                             else if (this.stairtype.equalsIgnoreCase("cobblestair"))
                             {
@@ -368,7 +368,7 @@ public class SpiralStaircaseBrush extends Brush
                                     undo.put(this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z));
                                 }
                                 this.setBlockIdAt(blockPositionZ - v.getBrushSize() + z, blockPositionX - v.getBrushSize() + x, blockPositionY + i, 67);
-                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z).setData((byte) 0);
+                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z).setData((byte)0);
                             }
                             break;
                         default:
@@ -379,7 +379,7 @@ public class SpiralStaircaseBrush extends Brush
                                     undo.put(this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z));
                                 }
                                 this.setBlockIdAt(blockPositionZ - v.getBrushSize() + z, blockPositionX - v.getBrushSize() + x, blockPositionY + i, 53);
-                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z).setData((byte) (spiral[x][i][z] - 2));
+                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z).setData((byte)(spiral[x][i][z] - 2));
                             }
                             else if (this.stairtype.equalsIgnoreCase("cobblestair"))
                             {
@@ -388,7 +388,7 @@ public class SpiralStaircaseBrush extends Brush
                                     undo.put(this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z));
                                 }
                                 this.setBlockIdAt(blockPositionZ - v.getBrushSize() + z, blockPositionX - v.getBrushSize() + x, blockPositionY + i, 67);
-                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z).setData((byte) (spiral[x][i][z] - 2));
+                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z).setData((byte)(spiral[x][i][z] - 2));
                             }
                             break;
                     }
@@ -722,7 +722,7 @@ public class SpiralStaircaseBrush extends Brush
                                     undo.put(this.clampY(blockPositionX - v.getBrushSize() - x, blockPositionY + i, blockPositionZ - v.getBrushSize() + z));
                                 }
                                 this.setBlockIdAt(blockPositionZ - v.getBrushSize() + z, blockPositionX - v.getBrushSize() + x, blockPositionY - i, 53);
-                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z).setData((byte) 0);
+                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z).setData((byte)0);
                             }
                             else if (this.stairtype.equalsIgnoreCase("cobblestair"))
                             {
@@ -731,7 +731,7 @@ public class SpiralStaircaseBrush extends Brush
                                     undo.put(this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z));
                                 }
                                 this.setBlockIdAt(blockPositionZ - v.getBrushSize() + z, blockPositionX - v.getBrushSize() + x, blockPositionY - i, 67);
-                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z).setData((byte) 0);
+                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z).setData((byte)0);
                             }
                             break;
                         default:
@@ -742,7 +742,7 @@ public class SpiralStaircaseBrush extends Brush
                                     undo.put(this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z));
                                 }
                                 this.setBlockIdAt(blockPositionZ - v.getBrushSize() + z, blockPositionX - v.getBrushSize() + x, blockPositionY - i, 53);
-                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z).setData((byte) (spiral[x][i][z] - 2));
+                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z).setData((byte)(spiral[x][i][z] - 2));
                             }
                             else if (this.stairtype.equalsIgnoreCase("cobblestair"))
                             {
@@ -751,7 +751,7 @@ public class SpiralStaircaseBrush extends Brush
                                     undo.put(this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z));
                                 }
                                 this.setBlockIdAt(blockPositionZ - v.getBrushSize() + z, blockPositionX - v.getBrushSize() + x, blockPositionY - i, 67);
-                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z).setData((byte) (spiral[x][i][z] - 2));
+                                this.clampY(blockPositionX - v.getBrushSize() + x, blockPositionY - i, blockPositionZ - v.getBrushSize() + z).setData((byte)(spiral[x][i][z] - 2));
                             }
                             break;
                     }

@@ -83,10 +83,10 @@ public class OceanBrush extends Brush
     {
         final World world = this.getWorld();
 
-        final int minX = (int) Math.floor((this.getTargetBlock().getX() - v.getBrushSize()));
-        final int minZ = (int) Math.floor((this.getTargetBlock().getZ() - v.getBrushSize()));
-        final int maxX = (int) Math.floor((this.getTargetBlock().getX() + v.getBrushSize()));
-        final int maxZ = (int) Math.floor((this.getTargetBlock().getZ() + v.getBrushSize()));
+        final int minX = (int)Math.floor((this.getTargetBlock().getX() - v.getBrushSize()));
+        final int minZ = (int)Math.floor((this.getTargetBlock().getZ() - v.getBrushSize()));
+        final int maxX = (int)Math.floor((this.getTargetBlock().getX() + v.getBrushSize()));
+        final int maxZ = (int)Math.floor((this.getTargetBlock().getZ() + v.getBrushSize()));
 
         for (int x = minX; x <= maxX; x++)
         {

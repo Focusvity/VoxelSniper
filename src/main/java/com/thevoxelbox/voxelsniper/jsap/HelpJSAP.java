@@ -179,7 +179,7 @@ public class HelpJSAP extends JSAP
                 l = StringUtils.wrapToList(this.explanation, this.screenWidth);
                 for (final Object aL : l)
                 {
-                    final String next = (String) aL;
+                    final String next = (String)aL;
                     returnValue.add(ChatColor.AQUA + next);
                 }
             }
